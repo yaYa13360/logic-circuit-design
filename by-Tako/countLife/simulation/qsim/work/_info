@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Ecircuit\final\countLife\simulation\qsim
+vcountLife
+Z1 IdX@_DS7mXCYlVVfiQa;T<0
+Z2 ViA=jD9e9bhFGiBI2>[mez2
+Z3 dC:\Ecircuit\final\countLife\simulation\qsim
+Z4 w1621000812
+Z5 8countLife.vo
+Z6 FcountLife.vo
+L0 32
+Z7 OV;L;10.1e;51
+r1
+31
+Z8 !s90 -work|work|countLife.vo|
+Z9 o-work work -O0
+Z10 ncount@life
+!i10b 1
+Z11 !s100 G5eb`X9[Nj`>6]HJFh?f^3
+!s85 0
+Z12 !s108 1621000815.586000
+Z13 !s107 countLife.vo|
+!s101 -O0
+vcountLife_vlg_check_tst
+!i10b 1
+Z14 !s100 23Q;0nJcD9D3`1k<DEGkZ1
+Z15 IHI0OROXM`fXT7ciDFNQga0
+Z16 V5VbioE9P]U3ZNKemmgA[T0
+R3
+Z17 w1621000808
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 60
+R7
+r1
+!s85 0
+31
+Z20 !s108 1621000815.664000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z23 ncount@life_vlg_check_tst
+vcountLife_vlg_sample_tst
+!i10b 1
+Z24 !s100 zILnZCFP`S>_MNFIWQVT^1
+Z25 IBCKSR6zVU>l=[?bX8_az12
+Z26 VZgR;MIl6C^5ABlY;icZba2
+R3
+R17
+R18
+R19
+L0 30
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z27 ncount@life_vlg_sample_tst
+vcountLife_vlg_vec_tst
+!i10b 1
+Z28 !s100 ]KE2:kKg86W@n0HdBAO7e1
+Z29 IdQ_OS]7IVF@^NjUBgZ@MV0
+Z30 VIW=?57b`:LMR;TTImV0<l0
+R3
+R17
+R18
+R19
+Z31 L0 235
+R7
+r1
+!s85 0
+31
+R20
+R21
+R22
+!s101 -O0
+R9
+Z32 ncount@life_vlg_vec_tst

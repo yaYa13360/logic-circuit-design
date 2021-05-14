@@ -1,0 +1,10 @@
+|countLife
+touch => tempTouch.IN0
+start => tempTouch.IN1
+led[3] << temp[3].DB_MAX_OUTPUT_PORT_TYPE
+led[2] << temp[2].DB_MAX_OUTPUT_PORT_TYPE
+led[1] << temp[1].DB_MAX_OUTPUT_PORT_TYPE
+led[0] << temp[0].DB_MAX_OUTPUT_PORT_TYPE
+gameStatus << gameStatus.DB_MAX_OUTPUT_PORT_TYPE
+
+
