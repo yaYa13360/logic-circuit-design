@@ -1,0 +1,19 @@
+|createNum2
+clk1 => op1[0].CLK
+clk1 => op1[1].CLK
+clk1 => op1[2].CLK
+clk1 => op1[3].CLK
+clk2 => op2[0].CLK
+clk2 => op2[1].CLK
+clk2 => op2[2].CLK
+clk2 => op2[3].CLK
+tenT[0] <= op2[0].DB_MAX_OUTPUT_PORT_TYPE
+tenT[1] <= op2[1].DB_MAX_OUTPUT_PORT_TYPE
+tenT[2] <= op2[2].DB_MAX_OUTPUT_PORT_TYPE
+tenT[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+unitT[0] <= op1[0].DB_MAX_OUTPUT_PORT_TYPE
+unitT[1] <= op1[1].DB_MAX_OUTPUT_PORT_TYPE
+unitT[2] <= op1[2].DB_MAX_OUTPUT_PORT_TYPE
+unitT[3] <= Add1.DB_MAX_OUTPUT_PORT_TYPE
+
+
