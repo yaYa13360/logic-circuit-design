@@ -1,0 +1,85 @@
+|genFace
+col_s0 <= matrixFace:inst.col_s[0]
+clock => scanf_gen:inst1.clockin
+TFS => matrixFace:inst.TFS
+gameStatus => matrixFace:inst.gameStatus
+col_s1 <= matrixFace:inst.col_s[1]
+col_s2 <= matrixFace:inst.col_s[2]
+col_s3 <= matrixFace:inst.col_s[3]
+col_s4 <= matrixFace:inst.col_s[4]
+col_s5 <= matrixFace:inst.col_s[5]
+col_s6 <= matrixFace:inst.col_s[6]
+col_s7 <= matrixFace:inst.col_s[7]
+row_s0 <= matrixFace:inst.row_s[0]
+row_s1 <= matrixFace:inst.row_s[1]
+row_s2 <= matrixFace:inst.row_s[2]
+row_s3 <= matrixFace:inst.row_s[3]
+row_s4 <= matrixFace:inst.row_s[4]
+row_s5 <= matrixFace:inst.row_s[5]
+row_s6 <= matrixFace:inst.row_s[6]
+row_s7 <= matrixFace:inst.row_s[7]
+
+
+|genFace|matrixFace:inst
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => row_s[7]~reg0.CLK
+clk => row_s[6]~reg0.CLK
+clk => row_s[5]~reg0.CLK
+clk => row_s[4]~reg0.CLK
+clk => row_s[3]~reg0.CLK
+clk => row_s[2]~reg0.CLK
+clk => row_s[1]~reg0.CLK
+clk => row_s[0]~reg0.CLK
+clk => col_s[7]~reg0.CLK
+clk => col_s[6]~reg0.CLK
+clk => col_s[5]~reg0.CLK
+clk => col_s[4]~reg0.CLK
+clk => col_s[3]~reg0.CLK
+clk => col_s[2]~reg0.CLK
+clk => col_s[1]~reg0.CLK
+clk => col_s[0]~reg0.CLK
+TFS => col_s.OUTPUTSELECT
+TFS => col_s.OUTPUTSELECT
+gameStatus => ~NO_FANOUT~
+col_s[7] <= col_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[6] <= col_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[5] <= col_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[4] <= col_s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[3] <= col_s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[2] <= col_s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[1] <= col_s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[0] <= col_s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[7] <= row_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[6] <= row_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[5] <= row_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[4] <= row_s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[3] <= row_s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[2] <= row_s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[1] <= row_s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[0] <= row_s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|genFace|scanf_gen:inst1
+clockin => PULSE.CLK
+clockin => counter[0].CLK
+clockin => counter[1].CLK
+clockin => counter[2].CLK
+clockin => counter[3].CLK
+clockin => counter[4].CLK
+clockin => counter[5].CLK
+clockin => counter[6].CLK
+clockin => counter[7].CLK
+clockin => counter[8].CLK
+clockin => counter[9].CLK
+clockin => counter[10].CLK
+clockin => counter[11].CLK
+clockin => counter[12].CLK
+clockin => counter[13].CLK
+clockin => counter[14].CLK
+clockin => counter[15].CLK
+clockin => counter[16].CLK
+clockout <= PULSE.DB_MAX_OUTPUT_PORT_TYPE
+
+
