@@ -1,0 +1,41 @@
+|matrixFace
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => row_s[7]~reg0.CLK
+clk => row_s[6]~reg0.CLK
+clk => row_s[5]~reg0.CLK
+clk => row_s[4]~reg0.CLK
+clk => row_s[3]~reg0.CLK
+clk => row_s[2]~reg0.CLK
+clk => row_s[1]~reg0.CLK
+clk => row_s[0]~reg0.CLK
+clk => col_s[7]~reg0.CLK
+clk => col_s[6]~reg0.CLK
+clk => col_s[5]~reg0.CLK
+clk => col_s[4]~reg0.CLK
+clk => col_s[3]~reg0.CLK
+clk => col_s[2]~reg0.CLK
+clk => col_s[1]~reg0.CLK
+clk => col_s[0]~reg0.CLK
+TFS => col_s.OUTPUTSELECT
+TFS => col_s.OUTPUTSELECT
+gameStatus => ~NO_FANOUT~
+col_s[7] <= col_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[6] <= col_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[5] <= col_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[4] <= col_s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[3] <= col_s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[2] <= col_s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[1] <= col_s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[0] <= col_s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[7] <= row_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[6] <= row_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[5] <= row_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[4] <= row_s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[3] <= row_s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[2] <= row_s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[1] <= row_s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[0] <= row_s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

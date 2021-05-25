@@ -1,0 +1,22 @@
+|scanf_gen
+clockin => PULSE.CLK
+clockin => counter[0].CLK
+clockin => counter[1].CLK
+clockin => counter[2].CLK
+clockin => counter[3].CLK
+clockin => counter[4].CLK
+clockin => counter[5].CLK
+clockin => counter[6].CLK
+clockin => counter[7].CLK
+clockin => counter[8].CLK
+clockin => counter[9].CLK
+clockin => counter[10].CLK
+clockin => counter[11].CLK
+clockin => counter[12].CLK
+clockin => counter[13].CLK
+clockin => counter[14].CLK
+clockin => counter[15].CLK
+clockin => counter[16].CLK
+clockout <= PULSE.DB_MAX_OUTPUT_PORT_TYPE
+
+
