@@ -13,8 +13,8 @@ port(
 	--min_digits     : in  std_logic_vector(3 downto 0);
 	--max_tens       : in  std_logic_vector(3 downto 0);
 	--max_digits     : in  std_logic_vector(3 downto 0);
-	out_tens       : out std_logic_vector(3 downto 0);
-	out_digits     : out std_logic_vector(3 downto 0);
+	--out_tens       : out std_logic_vector(3 downto 0);
+	--out_digits     : out std_logic_vector(3 downto 0);
 	DE_tens        : out std_logic_vector(2 downto 0);
 	DE_digits      : out std_logic_vector(2 downto 0);
 	output_tens    : out std_logic_vector(3 downto 0);
@@ -96,29 +96,8 @@ begin
 					when others =>
 						temp_tens <= "0000";
 				end case;
-				case input_digits is
-					when "0000" =>
-						temp_digits <= "0001";
-					when "0001" =>
-						temp_digits <= "0010";
-					when "0010" =>
-						temp_digits <= "0011";
-					when "0011" =>
-						temp_digits <= "0100";
-					when "0100" =>
-						temp_digits <= "0101";
-					when "0101" =>
-						temp_digits <= "0110";
-					when "0110" =>
-						temp_digits <= "0111";
-					when "0111" =>
-						temp_digits <= "1000";
-					when "1000" =>
-						temp_digits <= "1001";
-					when others =>
-						temp_digits <= "0000";
-				end case;
 			else
+				temp_tens <= input_tens;
 				case input_digits is
 					when "0000" =>
 						temp_digits <= "0001";
@@ -142,10 +121,36 @@ begin
 						temp_digits <= "0000";
 				end case;
 			end if;
+			if (input_digits = "1001") then 
+				case input_tens is
+					when "0000" =>
+						temp_tens <= "0001";
+					when "0001" =>
+						temp_tens <= "0010";
+					when "0010" =>
+						temp_tens <= "0011";
+					when "0011" =>
+						temp_tens <= "0100";
+					when "0100" =>
+						temp_tens <= "0101";
+					when "0101" =>
+						temp_tens <= "0110";
+					when "0110" =>
+						temp_tens <= "0111";
+					when "0111" =>
+						temp_tens <= "1000";
+					when "1000" =>
+						temp_tens <= "1001";
+					when others =>
+						temp_tens <= "0000";
+				end case;
+			else
+				temp_tens <= input_tens;
+			end if;
 			output_tens    <= temp_tens;
 			output_digits  <= temp_digits;
-			out_tens       <= temp_tens;
-			out_digits     <= temp_digits;
+			--out_tens       <= temp_tens;
+			--out_digits     <= temp_digits;
 			DE_tens        <= "000";
 			DE_digits      <= "001";
 		end if;
@@ -175,28 +180,6 @@ begin
 					when others =>
 						temp_tens <= "0000";
 				end case;
-				case input_digits is
-					when "0001" =>
-						temp_digits <= "0000";
-					when "0010" =>
-						temp_digits <= "0001";
-					when "0011" =>
-						temp_digits <= "0010";
-					when "0100" =>
-						temp_digits <= "0011";
-					when "0101" =>
-						temp_digits <= "0100";
-					when "0110" =>
-						temp_digits <= "0101";
-					when "0111" =>
-						temp_digits <= "0110";
-					when "1000" =>
-						temp_digits <= "0111";
-					when "1001" =>
-						temp_digits <= "1000";
-					when others =>
-						temp_digits <= "0000";
-				end case;
 			else
 				case input_digits is
 					when "0001" =>
@@ -220,11 +203,38 @@ begin
 					when others =>
 						temp_digits <= "0000";
 				end case;
+				temp_tens <= input_tens;
+			end if;
+			if (input_digits = "0000") then 
+				case input_tens is
+					when "0001" =>
+						temp_tens <= "0000";
+					when "0010" =>
+						temp_tens <= "0001";
+					when "0011" =>
+						temp_tens <= "0010";
+					when "0100" =>
+						temp_tens <= "0011";
+					when "0101" =>
+						temp_tens <= "0100";
+					when "0110" =>
+						temp_tens <= "0101";
+					when "0111" =>
+						temp_tens <= "0110";
+					when "1000" =>
+						temp_tens <= "0111";
+					when "1001" =>
+						temp_tens <= "1000";
+					when others =>
+						temp_tens <= "0000";
+				end case;
+			else
+				temp_tens <= input_tens;
 			end if;
 			output_tens    <= temp_tens;
 			output_digits  <= temp_digits;
-			out_tens       <= temp_tens;
-			out_digits     <= temp_digits;
+			--out_tens       <= temp_tens;
+			--out_digits     <= temp_digits;
 			DE_tens        <= "100";
 			DE_digits      <= "101";
 		end if;	
