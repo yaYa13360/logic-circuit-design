@@ -1,0 +1,47 @@
+|projectFull
+TSF1 <= <GND>
+TSF0 <= <GND>
+enter => CompareNum:inst1.enter
+in7 => CompareNum:inst1.u[0]
+in6 => CompareNum:inst1.u[1]
+in5 => CompareNum:inst1.u[2]
+in4 => CompareNum:inst1.u[3]
+in3 => CompareNum:inst1.u[4]
+in2 => CompareNum:inst1.u[5]
+in1 => CompareNum:inst1.u[6]
+in0 => CompareNum:inst1.u[7]
+
+
+|projectFull|countLife:inst
+touch => tempTouch.IN0
+start => tempTouch.IN1
+led[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+gameStatus <= gameStatus.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectFull|CompareNum:inst1
+enter => temp2[1].CLK
+enter => temp2[0].CLK
+u[7] => temp.IN0
+u[6] => temp.IN0
+u[5] => temp.IN0
+u[4] => temp.IN0
+u[3] => temp.IN0
+u[2] => temp.IN0
+u[1] => temp.IN0
+u[0] => temp.IN0
+g[7] => temp.IN1
+g[6] => temp.IN1
+g[5] => temp.IN1
+g[4] => temp.IN1
+g[3] => temp.IN1
+g[2] => temp.IN1
+g[1] => temp.IN1
+g[0] => temp.IN1
+TFS[1] <= temp2[1].DB_MAX_OUTPUT_PORT_TYPE
+TFS[0] <= temp2[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
