@@ -1,5 +1,5 @@
 Fitter report for genFace
-Wed May 26 03:31:33 2021
+Wed Jun 02 01:20:46 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -64,7 +64,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed May 26 03:31:33 2021      ;
+; Fitter Status                   ; Successful - Wed Jun 02 01:20:46 2021      ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                   ; genFace                                    ;
 ; Top-level Entity Name           ; genFace                                    ;
@@ -72,8 +72,8 @@ agreement for further details.
 ; Device                          ; 5CGXFC7C7F23C8                             ;
 ; Timing Models                   ; Final                                      ;
 ; Logic utilization (in ALMs)     ; 25 / 56,480 ( < 1 % )                      ;
-; Total registers                 ; 46                                         ;
-; Total pins                      ; 19 / 268 ( 7 % )                           ;
+; Total registers                 ; 43                                         ;
+; Total pins                      ; 27 / 268 ( 10 % )                          ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                      ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                            ;
@@ -175,6 +175,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; row_s5     ; Incomplete set of assignments ;
 ; row_s6     ; Incomplete set of assignments ;
 ; row_s7     ; Incomplete set of assignments ;
+; col2_0     ; Incomplete set of assignments ;
+; col2_1     ; Incomplete set of assignments ;
+; col2_2     ; Incomplete set of assignments ;
+; col2_3     ; Incomplete set of assignments ;
+; col2_4     ; Incomplete set of assignments ;
+; col2_5     ; Incomplete set of assignments ;
+; col2_6     ; Incomplete set of assignments ;
+; col2_7     ; Incomplete set of assignments ;
 ; TFS        ; Incomplete set of assignments ;
 ; clock      ; Incomplete set of assignments ;
 +------------+-------------------------------+
@@ -187,14 +195,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------+------------------+-----------------------+
 ; clock~inputCLKENA0          ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                       ;                  ;                       ;
 ; matrixFace:inst|cnt[0]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; matrixFace:inst|cnt[0]~DUPLICATE      ;                  ;                       ;
+; matrixFace:inst|cnt[2]      ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; matrixFace:inst|cnt[2]~DUPLICATE      ;                  ;                       ;
 ; scanf_gen:inst1|counter[1]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[1]~DUPLICATE  ;                  ;                       ;
-; scanf_gen:inst1|counter[2]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[2]~DUPLICATE  ;                  ;                       ;
-; scanf_gen:inst1|counter[3]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[3]~DUPLICATE  ;                  ;                       ;
 ; scanf_gen:inst1|counter[6]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[6]~DUPLICATE  ;                  ;                       ;
-; scanf_gen:inst1|counter[7]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[7]~DUPLICATE  ;                  ;                       ;
 ; scanf_gen:inst1|counter[9]  ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[9]~DUPLICATE  ;                  ;                       ;
 ; scanf_gen:inst1|counter[12] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[12]~DUPLICATE ;                  ;                       ;
-; scanf_gen:inst1|counter[13] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[13]~DUPLICATE ;                  ;                       ;
 ; scanf_gen:inst1|counter[15] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[15]~DUPLICATE ;                  ;                       ;
 ; scanf_gen:inst1|counter[16] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; scanf_gen:inst1|counter[16]~DUPLICATE ;                  ;                       ;
 +-----------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+---------------------------------------+------------------+-----------------------+
@@ -206,8 +211,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 123 ) ; 0.00 % ( 0 / 123 )         ; 0.00 % ( 0 / 123 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 123 ) ; 0.00 % ( 0 / 123 )         ; 0.00 % ( 0 / 123 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 139 ) ; 0.00 % ( 0 / 139 )         ; 0.00 % ( 0 / 139 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 139 ) ; 0.00 % ( 0 / 139 )         ; 0.00 % ( 0 / 139 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -230,7 +235,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 123 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 139 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -248,12 +253,12 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 +-------------------------------------------------------------+--------------------+-------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 25 / 56,480        ; < 1 % ;
 ; ALMs needed [=A-B+C]                                        ; 25                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 30 / 56,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 15                 ;       ;
-;         [b] ALMs used for LUT logic                         ; 12                 ;       ;
-;         [c] ALMs used for registers                         ; 3                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 29 / 56,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 14                 ;       ;
+;         [b] ALMs used for LUT logic                         ; 11                 ;       ;
+;         [c] ALMs used for registers                         ; 4                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 56,480         ; < 1 % ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 56,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 56,480         ; 0 %   ;
 ;         [a] Due to location constrained logic               ; 0                  ;       ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                  ;       ;
@@ -273,16 +278,16 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ;     -- 4 input functions                                    ; 6                  ;       ;
 ;     -- <=3 input functions                                  ; 33                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 2                  ;       ;
-; Dedicated logic registers                                   ; 46                 ;       ;
+; Dedicated logic registers                                   ; 43                 ;       ;
 ;     -- By type:                                             ;                    ;       ;
 ;         -- Primary logic registers                          ; 35 / 112,960       ; < 1 % ;
-;         -- Secondary logic registers                        ; 11 / 112,960       ; < 1 % ;
+;         -- Secondary logic registers                        ; 8 / 112,960        ; < 1 % ;
 ;     -- By function:                                         ;                    ;       ;
 ;         -- Design implementation registers                  ; 35                 ;       ;
-;         -- Routing optimization registers                   ; 11                 ;       ;
+;         -- Routing optimization registers                   ; 8                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 19 / 268           ; 7 %   ;
+; I/O pins                                                    ; 27 / 268           ; 10 %  ;
 ;     -- Clock pins                                           ; 2 / 11             ; 18 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 23             ; 0 %   ;
 ;                                                             ;                    ;       ;
@@ -310,12 +315,12 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; Channel PLLs                                                ; 0 / 6              ; 0 %   ;
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
-; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.1% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.3% / 0.3% / 0.5% ;       ;
-; Maximum fan-out                                             ; 27                 ;       ;
-; Highest non-global fan-out                                  ; 19                 ;       ;
-; Total fan-out                                               ; 281                ;       ;
-; Average fan-out                                             ; 2.07               ;       ;
+; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.5% / 0.6% / 0.3% ;       ;
+; Maximum fan-out                                             ; 23                 ;       ;
+; Highest non-global fan-out                                  ; 20                 ;       ;
+; Total fan-out                                               ; 283                ;       ;
+; Average fan-out                                             ; 1.90               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
@@ -326,12 +331,12 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Logic utilization (ALMs needed / total ALMs on device)      ; 25 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
 ; ALMs needed [=A-B+C]                                        ; 25                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 30 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 15                    ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 12                    ; 0                              ;
-;         [c] ALMs used for registers                         ; 3                     ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 29 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 14                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 11                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 4                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 5 / 56480 ( < 1 % )   ; 0 / 56480 ( 0 % )              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 4 / 56480 ( < 1 % )   ; 0 / 56480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 56480 ( 0 % )     ; 0 / 56480 ( 0 % )              ;
 ;         [a] Due to location constrained logic               ; 0                     ; 0                              ;
 ;         [b] Due to LAB-wide signal conflicts                ; 0                     ; 0                              ;
@@ -358,14 +363,14 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; Dedicated logic registers                                   ; 0                     ; 0                              ;
 ;     -- By type:                                             ;                       ;                                ;
 ;         -- Primary logic registers                          ; 35 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
-;         -- Secondary logic registers                        ; 11 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
+;         -- Secondary logic registers                        ; 8 / 112960 ( < 1 % )  ; 0 / 112960 ( 0 % )             ;
 ;     -- By function:                                         ;                       ;                                ;
 ;         -- Design implementation registers                  ; 35                    ; 0                              ;
-;         -- Routing optimization registers                   ; 11                    ; 0                              ;
+;         -- Routing optimization registers                   ; 8                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ;                                                             ;                       ;                                ;
 ; Virtual pins                                                ; 0                     ; 0                              ;
-; I/O pins                                                    ; 19                    ; 0                              ;
+; I/O pins                                                    ; 27                    ; 0                              ;
 ; I/O registers                                               ; 0                     ; 0                              ;
 ; Total block memory bits                                     ; 0                     ; 0                              ;
 ; Total block memory implementation bits                      ; 0                     ; 0                              ;
@@ -378,8 +383,8 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 281                   ; 0                              ;
-;     -- Registered Connections                               ; 129                   ; 0                              ;
+;     -- Total Connections                                    ; 283                   ; 0                              ;
+;     -- Registered Connections                               ; 130                   ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -387,7 +392,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ;                                                             ;                       ;                                ;
 ; Partition Interface                                         ;                       ;                                ;
 ;     -- Input Ports                                          ; 3                     ; 0                              ;
-;     -- Output Ports                                         ; 16                    ; 0                              ;
+;     -- Output Ports                                         ; 24                    ; 0                              ;
 ;     -- Bidir Ports                                          ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Registered Ports                                            ;                       ;                                ;
@@ -411,9 +416,9 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; TFS        ; M18   ; 5B       ; 89           ; 36           ; 20           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; clock      ; M16   ; 5B       ; 89           ; 35           ; 60           ; 28                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; gameStatus ; G16   ; 7A       ; 70           ; 81           ; 51           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; TFS        ; N21   ; 5B       ; 89           ; 35           ; 94           ; 2                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; clock      ; M16   ; 5B       ; 89           ; 35           ; 60           ; 24                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; gameStatus ; G13   ; 7A       ; 56           ; 81           ; 17           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -422,41 +427,49 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name   ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; col_s0 ; T18   ; 5A       ; 89           ; 4            ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s1 ; L22   ; 5B       ; 89           ; 36           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s2 ; F15   ; 7A       ; 66           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s3 ; AA22  ; 4A       ; 64           ; 0            ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s4 ; N20   ; 5B       ; 89           ; 35           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s5 ; N19   ; 5B       ; 89           ; 36           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s6 ; N16   ; 5B       ; 89           ; 35           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; col_s7 ; AA19  ; 4A       ; 62           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s0 ; AB22  ; 4A       ; 64           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s1 ; Y20   ; 4A       ; 66           ; 0            ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s2 ; W22   ; 4A       ; 66           ; 0            ; 74           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s3 ; W16   ; 4A       ; 64           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s4 ; Y19   ; 4A       ; 66           ; 0            ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s5 ; P18   ; 5A       ; 89           ; 9            ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s6 ; Y22   ; 4A       ; 66           ; 0            ; 91           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; row_s7 ; N21   ; 5B       ; 89           ; 35           ; 94           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_0 ; K16   ; 7A       ; 64           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_1 ; J22   ; 7A       ; 84           ; 81           ; 17           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_2 ; D12   ; 7A       ; 50           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_3 ; C9    ; 8A       ; 34           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_4 ; B6    ; 8A       ; 32           ; 81           ; 34           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_5 ; A18   ; 7A       ; 74           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_6 ; N8    ; 3B       ; 28           ; 0            ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col2_7 ; E12   ; 7A       ; 50           ; 81           ; 57           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s0 ; AB15  ; 4A       ; 54           ; 0            ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s1 ; M20   ; 5B       ; 89           ; 37           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s2 ; M21   ; 5B       ; 89           ; 37           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s3 ; K17   ; 5B       ; 89           ; 37           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s4 ; K22   ; 5B       ; 89           ; 38           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s5 ; M22   ; 5B       ; 89           ; 36           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s6 ; L22   ; 5B       ; 89           ; 36           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; col_s7 ; H14   ; 7A       ; 60           ; 81           ; 0            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s0 ; N19   ; 5B       ; 89           ; 36           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s1 ; L18   ; 5B       ; 89           ; 38           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s2 ; N20   ; 5B       ; 89           ; 35           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s3 ; N16   ; 5B       ; 89           ; 35           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s4 ; L17   ; 5B       ; 89           ; 37           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s5 ; K21   ; 5B       ; 89           ; 38           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s6 ; M18   ; 5B       ; 89           ; 36           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; row_s7 ; L19   ; 5B       ; 89           ; 38           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +--------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+---------------------------------------------------------------------------+
-; I/O Bank Usage                                                            ;
-+----------+-----------------+---------------+--------------+---------------+
-; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+-----------------+---------------+--------------+---------------+
-; B2L      ; 0 / 0 ( -- )    ; --            ; --           ; --            ;
-; B1L      ; 0 / 14 ( 0 % )  ; --            ; --           ; --            ;
-; B0L      ; 0 / 14 ( 0 % )  ; --            ; --           ; --            ;
-; 3A       ; 0 / 16 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 0 / 32 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 8 / 48 ( 17 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 2 / 16 ( 13 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 7 / 16 ( 44 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 2 / 80 ( 3 % )  ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 32 ( 0 % )  ; 2.5V          ; --           ; 2.5V          ;
-+----------+-----------------+---------------+--------------+---------------+
++-----------------------------------------------------------------------------+
+; I/O Bank Usage                                                              ;
++----------+-------------------+---------------+--------------+---------------+
+; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+-------------------+---------------+--------------+---------------+
+; B2L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
+; B1L      ; 0 / 14 ( 0 % )    ; --            ; --           ; --            ;
+; B0L      ; 0 / 14 ( 0 % )    ; --            ; --           ; --            ;
+; 3A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 1 / 32 ( 3 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 1 / 48 ( 2 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 16 / 16 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 7 / 80 ( 9 % )    ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 2 / 32 ( 6 % )    ; 2.5V          ; --           ; 2.5V          ;
++----------+-------------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -481,7 +494,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; A15      ; 418        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A16      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A17      ; 403        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A18      ; 401        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A18      ; 401        ; 7A       ; col2_5                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A19      ; 404        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A20      ; 402        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -504,10 +517,10 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; AA16     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; AA17     ; 153        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA18     ; 155        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AA19     ; 156        ; 4A       ; col_s7                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA19     ; 156        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA20     ; 158        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AA21     ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; AA22     ; 163        ; 4A       ; col_s3                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AA22     ; 163        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB1      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB2      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB3      ; 49         ; 3A       ; ^AS_DATA1, DATA1                ;        ;              ;                     ; Weak Pull Up ;                 ; --       ; On           ;
@@ -522,20 +535,20 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; AB12     ; 134        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB13     ; 132        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB14     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; AB15     ; 140        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; AB15     ; 140        ; 4A       ; col_s0                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; AB16     ;            ; 4A       ; VREFB4AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB17     ; 145        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB18     ; 147        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB19     ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; AB20     ; 148        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; AB21     ; 150        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; AB22     ; 161        ; 4A       ; row_s0                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; AB22     ; 161        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B3       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B4       ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B5       ; 468        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B6       ; 470        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; B6       ; 470        ; 8A       ; col2_4                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; B7       ; 472        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B8       ;            ; 8A       ; VREFB8AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B9       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -560,7 +573,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; C6       ; 474        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C7       ;            ; 8A       ; VCCIO8A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C8       ; 480        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; C9       ; 467        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; C9       ; 467        ; 8A       ; col2_3                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; C10      ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C11      ; 450        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C12      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -585,7 +598,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; D9       ; 479        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D10      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; D11      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D12      ; 449        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; D12      ; 449        ; 7A       ; col2_2                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D13      ; 441        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D14      ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D15      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -607,7 +620,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; E9       ; 477        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E10      ; 469        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E11      ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; E12      ; 451        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E12      ; 451        ; 7A       ; col2_7                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; E13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E14      ; 433        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E15      ; 417        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -632,7 +645,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; F12      ; 440        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F13      ; 435        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F14      ; 428        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F15      ; 419        ; 7A       ; col_s2                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; F15      ; 419        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F17      ; 372        ; 7A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F18      ; 399        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -652,10 +665,10 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; G10      ; 453        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G11      ; 438        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G12      ; 447        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G13      ; 439        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G13      ; 439        ; 7A       ; gameStatus                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; G14      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; G15      ; 426        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G16      ; 412        ; 7A       ; gameStatus                      ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; G16      ; 412        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G17      ; 410        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G18      ; 413        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -675,7 +688,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; H11      ; 445        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H13      ; 437        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H14      ; 429        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H14      ; 429        ; 7A       ; col_s7                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H15      ; 423        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H16      ; 421        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H17      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -705,7 +718,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; J19      ; 414        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J21      ; 381        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J22      ; 383        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; J22      ; 383        ; 7A       ; col2_1                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; K1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K3       ;            ; --       ; VCCL_GXBL                       ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
@@ -721,13 +734,13 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; K13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; K16      ; 424        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K17      ; 284        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; K16      ; 424        ; 7A       ; col2_0                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; K17      ; 284        ; 5B       ; col_s3                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 407        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K20      ; 405        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K21      ; 289        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; K22      ; 291        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; K21      ; 289        ; 5B       ; row_s5                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K22      ; 291        ; 5B       ; col_s4                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; L1       ; 27         ; B1L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L2       ; 26         ; B1L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -744,12 +757,12 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; L14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; L17      ; 286        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; L18      ; 290        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; L19      ; 288        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; L17      ; 286        ; 5B       ; row_s4                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L18      ; 290        ; 5B       ; row_s1                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L19      ; 288        ; 5B       ; row_s7                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; L20      ;            ; 5B       ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L22      ; 283        ; 5B       ; col_s1                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L22      ; 283        ; 5B       ; col_s6                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M3       ;            ; --       ; VCCH_GXBL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -767,11 +780,11 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; M15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; M16      ; 278        ; 5B       ; clock                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M17      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M18      ; 282        ; 5B       ; TFS                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M18      ; 282        ; 5B       ; row_s6                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M19      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M20      ; 285        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; M21      ; 287        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; M22      ; 281        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; M20      ; 285        ; 5B       ; col_s1                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M21      ; 287        ; 5B       ; col_s2                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M22      ; 281        ; 5B       ; col_s5                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N1       ; 28         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N2       ; 29         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -779,7 +792,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; N5       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N6       ; 58         ; 3A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; N7       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; N8       ; 106        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; N8       ; 106        ; 3B       ; col2_6                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; N9       ; 130        ; 3B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; N10      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; N11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -787,12 +800,12 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; N13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; N15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; N16      ; 276        ; 5B       ; col_s6                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N16      ; 276        ; 5B       ; row_s3                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N18      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; N19      ; 280        ; 5B       ; col_s5                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; N20      ; 277        ; 5B       ; col_s4                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; N21      ; 279        ; 5B       ; row_s7                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N19      ; 280        ; 5B       ; row_s0                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N20      ; 277        ; 5B       ; row_s2                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N21      ; 279        ; 5B       ; TFS                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N22      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -811,7 +824,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; P15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; P16      ; 225        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P17      ; 227        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; P18      ; 226        ; 5A       ; row_s5                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; P18      ; 226        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P19      ; 224        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P20      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; P21      ;            ; 5A       ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -855,7 +868,7 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; T15      ; 217        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T17      ; 215        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; T18      ; 213        ; 5A       ; col_s0                          ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; T18      ; 213        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T19      ; 212        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T20      ; 214        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -919,13 +932,13 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; W13      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W14      ;            ; --       ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W15      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; W16      ; 162        ; 4A       ; row_s3                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W16      ; 162        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W17      ;            ; --       ; VCCPD3B4A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W18      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W19      ; 159        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; W20      ;            ; 4A       ; VCCIO4A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; W21      ; 171        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; W22      ; 166        ; 4A       ; row_s2                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; W22      ; 166        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; Y3       ; 36         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -944,10 +957,10 @@ The pin-out file can be found in C:/altera/14.0/genFace/output_files/genFace.pin
 ; Y16      ; 149        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y17      ; 151        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y18      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; Y19      ; 167        ; 4A       ; row_s4                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
-; Y20      ; 165        ; 4A       ; row_s1                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y19      ; 167        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; Y20      ; 165        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; Y21      ; 169        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; Y22      ; 164        ; 4A       ; row_s6                          ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; Y22      ; 164        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 +----------+------------+----------+---------------------------------+--------+--------------+---------------------+--------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -957,9 +970,9 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------+--------------+
 ; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------+--------------+
-; |genFace                   ; 25.0 (0.5)           ; 29.0 (0.5)                       ; 4.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 49 (1)              ; 46 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 19   ; 0            ; |genFace                 ; work         ;
-;    |matrixFace:inst|       ; 7.0 (7.0)            ; 9.0 (9.0)                        ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 18 (18)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |genFace|matrixFace:inst ; work         ;
-;    |scanf_gen:inst1|       ; 17.5 (17.5)          ; 19.5 (19.5)                      ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 28 (28)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |genFace|scanf_gen:inst1 ; work         ;
+; |genFace                   ; 25.0 (0.5)           ; 28.0 (0.5)                       ; 3.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 49 (1)              ; 43 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 27   ; 0            ; |genFace                 ; work         ;
+;    |matrixFace:inst|       ; 7.0 (7.0)            ; 9.0 (9.0)                        ; 2.0 (2.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 14 (14)             ; 19 (19)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |genFace|matrixFace:inst ; work         ;
+;    |scanf_gen:inst1|       ; 17.5 (17.5)          ; 18.5 (18.5)                      ; 1.0 (1.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 34 (34)             ; 24 (24)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |genFace|scanf_gen:inst1 ; work         ;
 +----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -986,8 +999,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; row_s5     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; row_s6     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; row_s7     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; TFS        ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; clock      ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; col2_0     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_1     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_2     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_3     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_4     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_5     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_6     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; col2_7     ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; TFS        ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; clock      ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
@@ -998,10 +1019,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------+-------------------+---------+
 ; gameStatus                     ;                   ;         ;
 ; TFS                            ;                   ;         ;
-;      - matrixFace:inst|col_s~0 ; 0                 ; 0       ;
-;      - matrixFace:inst|col_s~1 ; 0                 ; 0       ;
+;      - matrixFace:inst|col_s~0 ; 1                 ; 0       ;
+;      - matrixFace:inst|col_s~1 ; 1                 ; 0       ;
 ; clock                          ;                   ;         ;
-;      - scanf_gen:inst1|PULSE   ; 0                 ; 0       ;
+;      - scanf_gen:inst1|PULSE   ; 1                 ; 0       ;
 +--------------------------------+-------------------+---------+
 
 
@@ -1011,8 +1032,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                  ; Location       ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
 ; clock                 ; PIN_M16        ; 2       ; Clock ; no     ; --                   ; --               ; --                        ;
-; clock                 ; PIN_M16        ; 27      ; Clock ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; scanf_gen:inst1|PULSE ; FF_X67_Y31_N59 ; 19      ; Clock ; no     ; --                   ; --               ; --                        ;
+; clock                 ; PIN_M16        ; 23      ; Clock ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; scanf_gen:inst1|PULSE ; FF_X84_Y37_N56 ; 20      ; Clock ; no     ; --                   ; --               ; --                        ;
 +-----------------------+----------------+---------+-------+--------+----------------------+------------------+---------------------------+
 
 
@@ -1021,7 +1042,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
-; clock ; PIN_M16  ; 27      ; Global Clock         ; GCLK10           ; --                        ;
+; clock ; PIN_M16  ; 23      ; Global Clock         ; GCLK10           ; --                        ;
 +-------+----------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1030,64 +1051,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+---------+
 ; Name                                  ; Fan-Out ;
 +---------------------------------------+---------+
-; scanf_gen:inst1|PULSE                 ; 19      ;
+; scanf_gen:inst1|PULSE                 ; 20      ;
 ; matrixFace:inst|cnt[1]                ; 13      ;
-; matrixFace:inst|cnt[2]                ; 12      ;
 ; matrixFace:inst|cnt[0]~DUPLICATE      ; 11      ;
+; scanf_gen:inst1|counter[7]            ; 9       ;
+; matrixFace:inst|cnt[2]                ; 9       ;
 ; scanf_gen:inst1|Equal0~0              ; 8       ;
 ; scanf_gen:inst1|Equal1~1              ; 7       ;
 ; scanf_gen:inst1|Equal1~0              ; 7       ;
-; scanf_gen:inst1|counter[7]~DUPLICATE  ; 6       ;
-; scanf_gen:inst1|counter[1]            ; 6       ;
+; scanf_gen:inst1|counter[1]~DUPLICATE  ; 6       ;
 ; scanf_gen:inst1|Equal1~2              ; 4       ;
-; scanf_gen:inst1|counter[1]~DUPLICATE  ; 3       ;
+; matrixFace:inst|cnt[2]~DUPLICATE      ; 3       ;
 ; scanf_gen:inst1|counter[0]            ; 3       ;
+; scanf_gen:inst1|counter[3]            ; 3       ;
 ; scanf_gen:inst1|counter[5]            ; 3       ;
 ; scanf_gen:inst1|counter[11]           ; 3       ;
-; scanf_gen:inst1|counter[7]            ; 3       ;
+; scanf_gen:inst1|counter[13]           ; 3       ;
+; scanf_gen:inst1|counter[1]            ; 3       ;
 ; matrixFace:inst|cnt[0]                ; 3       ;
+; scanf_gen:inst1|counter[9]~DUPLICATE  ; 2       ;
 ; TFS~input                             ; 2       ;
 ; matrixFace:inst|cnt[0]~2              ; 2       ;
-; scanf_gen:inst1|counter~8             ; 2       ;
 ; scanf_gen:inst1|counter~7             ; 2       ;
-; scanf_gen:inst1|counter~6             ; 2       ;
 ; scanf_gen:inst1|counter~5             ; 2       ;
 ; scanf_gen:inst1|counter~4             ; 2       ;
-; scanf_gen:inst1|counter~3             ; 2       ;
 ; scanf_gen:inst1|counter~1             ; 2       ;
 ; scanf_gen:inst1|counter~0             ; 2       ;
-; scanf_gen:inst1|counter[3]            ; 2       ;
 ; scanf_gen:inst1|counter[6]            ; 2       ;
-; scanf_gen:inst1|counter[13]           ; 2       ;
 ; scanf_gen:inst1|counter[15]           ; 2       ;
 ; scanf_gen:inst1|counter[16]           ; 2       ;
-; scanf_gen:inst1|counter[9]            ; 2       ;
+; scanf_gen:inst1|counter[2]            ; 2       ;
 ; scanf_gen:inst1|counter[4]            ; 2       ;
 ; scanf_gen:inst1|counter[8]            ; 2       ;
 ; scanf_gen:inst1|counter[10]           ; 2       ;
 ; scanf_gen:inst1|counter[14]           ; 2       ;
+; matrixFace:inst|cnt[2]~1              ; 2       ;
 ; matrixFace:inst|col_s~1               ; 2       ;
 ; matrixFace:inst|Mux2~0                ; 2       ;
 ; matrixFace:inst|col_s~0               ; 2       ;
 ; scanf_gen:inst1|Add0~41               ; 2       ;
-; scanf_gen:inst1|Add0~33               ; 2       ;
-; scanf_gen:inst1|counter[3]~DUPLICATE  ; 1       ;
 ; scanf_gen:inst1|counter[6]~DUPLICATE  ; 1       ;
-; scanf_gen:inst1|counter[13]~DUPLICATE ; 1       ;
 ; scanf_gen:inst1|counter[15]~DUPLICATE ; 1       ;
 ; scanf_gen:inst1|counter[16]~DUPLICATE ; 1       ;
-; scanf_gen:inst1|counter[9]~DUPLICATE  ; 1       ;
-; scanf_gen:inst1|counter[2]~DUPLICATE  ; 1       ;
 ; scanf_gen:inst1|counter[12]~DUPLICATE ; 1       ;
 ; clock~input                           ; 1       ;
+; scanf_gen:inst1|counter~8             ; 1       ;
+; scanf_gen:inst1|counter~6             ; 1       ;
+; scanf_gen:inst1|counter~3             ; 1       ;
 ; scanf_gen:inst1|counter~2             ; 1       ;
 ; scanf_gen:inst1|PULSE~0               ; 1       ;
 ; scanf_gen:inst1|Equal0~3              ; 1       ;
 ; scanf_gen:inst1|Equal0~2              ; 1       ;
 ; scanf_gen:inst1|Equal0~1              ; 1       ;
-; scanf_gen:inst1|counter[2]            ; 1       ;
+; scanf_gen:inst1|counter[9]            ; 1       ;
 ; scanf_gen:inst1|counter[12]           ; 1       ;
-; matrixFace:inst|cnt[2]~1              ; 1       ;
 ; matrixFace:inst|cnt[1]~0              ; 1       ;
 ; matrixFace:inst|Mux3~7                ; 1       ;
 ; matrixFace:inst|Mux3~6                ; 1       ;
@@ -1126,6 +1143,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; scanf_gen:inst1|Add0~42               ; 1       ;
 ; scanf_gen:inst1|Add0~37               ; 1       ;
 ; scanf_gen:inst1|Add0~34               ; 1       ;
+; scanf_gen:inst1|Add0~33               ; 1       ;
 ; scanf_gen:inst1|Add0~30               ; 1       ;
 ; scanf_gen:inst1|Add0~29               ; 1       ;
 ; scanf_gen:inst1|Add0~26               ; 1       ;
@@ -1150,22 +1168,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Routing Resource Type        ; Usage                  ;
 +------------------------------+------------------------+
-; Block interconnects          ; 66 / 374,484 ( < 1 % ) ;
-; C12 interconnects            ; 12 / 16,664 ( < 1 % )  ;
-; C2 interconnects             ; 8 / 155,012 ( < 1 % )  ;
-; C4 interconnects             ; 59 / 72,600 ( < 1 % )  ;
+; Block interconnects          ; 71 / 374,484 ( < 1 % ) ;
+; C12 interconnects            ; 0 / 16,664 ( 0 % )     ;
+; C2 interconnects             ; 14 / 155,012 ( < 1 % ) ;
+; C4 interconnects             ; 5 / 72,600 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 30 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 30 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 30 ( 0 % )         ;
-; Direct links                 ; 25 / 374,484 ( < 1 % ) ;
+; Direct links                 ; 27 / 374,484 ( < 1 % ) ;
 ; Global clocks                ; 1 / 16 ( 6 % )         ;
 ; Horizontal periphery clocks  ; 0 / 72 ( 0 % )         ;
 ; Local interconnects          ; 24 / 112,960 ( < 1 % ) ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
-; R14 interconnects            ; 10 / 15,868 ( < 1 % )  ;
-; R14/C12 interconnect drivers ; 20 / 27,256 ( < 1 % )  ;
-; R3 interconnects             ; 29 / 169,296 ( < 1 % ) ;
-; R6 interconnects             ; 47 / 330,800 ( < 1 % ) ;
+; R14 interconnects            ; 3 / 15,868 ( < 1 % )   ;
+; R14/C12 interconnect drivers ; 3 / 27,256 ( < 1 % )   ;
+; R3 interconnects             ; 19 / 169,296 ( < 1 % ) ;
+; R6 interconnects             ; 36 / 330,800 ( < 1 % ) ;
 ; Spine clocks                 ; 1 / 480 ( < 1 % )      ;
 ; Wire stub REs                ; 0 / 20,834 ( 0 % )     ;
 +------------------------------+------------------------+
@@ -1226,9 +1244,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 19        ; 0            ; 0            ; 19        ; 19        ; 0            ; 16           ; 0            ; 0            ; 0            ; 0            ; 16           ; 0            ; 0            ; 0            ; 0            ; 16           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 27        ; 0            ; 0            ; 27        ; 27        ; 0            ; 24           ; 0            ; 0            ; 0            ; 0            ; 24           ; 0            ; 0            ; 0            ; 0            ; 24           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 19           ; 19           ; 19           ; 19           ; 19           ; 0         ; 19           ; 19           ; 0         ; 0         ; 19           ; 3            ; 19           ; 19           ; 19           ; 19           ; 3            ; 19           ; 19           ; 19           ; 19           ; 3            ; 19           ; 19           ; 19           ; 19           ; 19           ; 19           ;
+; Total Inapplicable ; 27           ; 27           ; 27           ; 27           ; 27           ; 0         ; 27           ; 27           ; 0         ; 0         ; 27           ; 3            ; 27           ; 27           ; 27           ; 27           ; 3            ; 27           ; 27           ; 27           ; 27           ; 3            ; 27           ; 27           ; 27           ; 27           ; 27           ; 27           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; col_s0             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; gameStatus         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
@@ -1247,6 +1265,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; row_s5             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; row_s6             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; row_s7             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_0             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_1             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_2             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_3             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_4             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_5             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_6             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; col2_7             ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; TFS                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; clock              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
@@ -1299,8 +1325,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------+-------------------+
 ; Source Clock(s)       ; Destination Clock(s)  ; Delay Added in ns ;
 +-----------------------+-----------------------+-------------------+
-; scanf_gen:inst1|PULSE ; scanf_gen:inst1|PULSE ; 32.1              ;
-; clock                 ; clock                 ; 9.7               ;
+; scanf_gen:inst1|PULSE ; scanf_gen:inst1|PULSE ; 33.1              ;
+; clock                 ; clock                 ; 6.5               ;
 +-----------------------+-----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
@@ -1311,28 +1337,28 @@ This will disable optimization of problematic paths and expose them for further 
 +-----------------------------+--------------------------+-------------------+
 ; Source Register             ; Destination Register     ; Delay Added in ns ;
 +-----------------------------+--------------------------+-------------------+
-; scanf_gen:inst1|PULSE       ; scanf_gen:inst1|PULSE    ; 5.794             ;
-; scanf_gen:inst1|counter[16] ; scanf_gen:inst1|PULSE    ; 2.509             ;
-; scanf_gen:inst1|counter[12] ; scanf_gen:inst1|PULSE    ; 2.488             ;
-; scanf_gen:inst1|counter[13] ; scanf_gen:inst1|PULSE    ; 2.475             ;
-; scanf_gen:inst1|counter[9]  ; scanf_gen:inst1|PULSE    ; 2.434             ;
-; scanf_gen:inst1|counter[15] ; scanf_gen:inst1|PULSE    ; 2.433             ;
-; scanf_gen:inst1|counter[8]  ; scanf_gen:inst1|PULSE    ; 2.399             ;
-; scanf_gen:inst1|counter[6]  ; scanf_gen:inst1|PULSE    ; 2.392             ;
-; scanf_gen:inst1|counter[11] ; scanf_gen:inst1|PULSE    ; 2.378             ;
-; scanf_gen:inst1|counter[3]  ; scanf_gen:inst1|PULSE    ; 2.352             ;
-; scanf_gen:inst1|counter[1]  ; scanf_gen:inst1|PULSE    ; 2.351             ;
-; scanf_gen:inst1|counter[14] ; scanf_gen:inst1|PULSE    ; 2.334             ;
-; scanf_gen:inst1|counter[10] ; scanf_gen:inst1|PULSE    ; 2.334             ;
-; scanf_gen:inst1|counter[4]  ; scanf_gen:inst1|PULSE    ; 2.334             ;
-; scanf_gen:inst1|counter[2]  ; scanf_gen:inst1|PULSE    ; 2.334             ;
-; scanf_gen:inst1|counter[7]  ; scanf_gen:inst1|PULSE    ; 2.285             ;
-; scanf_gen:inst1|counter[5]  ; scanf_gen:inst1|PULSE    ; 2.285             ;
-; scanf_gen:inst1|counter[0]  ; scanf_gen:inst1|PULSE    ; 2.285             ;
-; matrixFace:inst|cnt[0]      ; matrixFace:inst|row_s[5] ; 1.052             ;
-; matrixFace:inst|cnt[1]      ; matrixFace:inst|row_s[2] ; 1.012             ;
-; matrixFace:inst|cnt[2]      ; matrixFace:inst|row_s[6] ; 1.012             ;
-; TFS                         ; matrixFace:inst|col_s[1] ; 0.254             ;
+; scanf_gen:inst1|PULSE       ; scanf_gen:inst1|PULSE    ; 5.009             ;
+; scanf_gen:inst1|counter[16] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[15] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[13] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[14] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[11] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[12] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[10] ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[7]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[8]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[6]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[5]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[4]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[9]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[2]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[3]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[1]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; scanf_gen:inst1|counter[0]  ; scanf_gen:inst1|PULSE    ; 1.877             ;
+; matrixFace:inst|cnt[0]      ; matrixFace:inst|row_s[6] ; 1.082             ;
+; matrixFace:inst|cnt[1]      ; matrixFace:inst|row_s[5] ; 1.042             ;
+; matrixFace:inst|cnt[2]      ; matrixFace:inst|row_s[1] ; 1.042             ;
+; TFS                         ; matrixFace:inst|col_s[1] ; 0.269             ;
 +-----------------------------+--------------------------+-------------------+
 Note: This table only shows the top 22 path(s) that have the largest delay added for hold.
 
@@ -1347,7 +1373,7 @@ Info (21076): Low junction temperature operating condition is not set. Assuming 
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 19 pins of 19 total pins. For the list of the pins please refer to the Input Pins, Output Pins, and Bidir Pins tables in the Fitter report and look for the user pins whose location is assigned by Fitter.
+Critical Warning (169085): No exact pin location assignment(s) for 27 pins of 27 total pins. For the list of the pins please refer to the Input Pins, Output Pins, and Bidir Pins tables in the Fitter report and look for the user pins whose location is assigned by Fitter.
 Info (184020): Starting Fitter periphery placement operations
 Info (11191): Automatically promoted 1 clock (1 global)
     Info (11162): clock~inputCLKENA0 with 17 fanout uses global clock CLKCTRL_G10
@@ -1360,30 +1386,30 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQue
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:07
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:03
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X56_Y23 to location X66_Y34
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:05
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X78_Y35 to location X89_Y45
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:04
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
 Info (144001): Generated suppressed messages file C:/altera/14.0/genFace/output_files/genFace.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5878 megabytes
-    Info: Processing ended: Wed May 26 03:31:33 2021
+    Info: Peak virtual memory: 5873 megabytes
+    Info: Processing ended: Wed Jun 02 01:20:47 2021
     Info: Elapsed time: 00:00:44
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Total CPU time (on all processors): 00:00:43
 
 
 +----------------------------+

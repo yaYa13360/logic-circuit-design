@@ -1,5 +1,5 @@
 Analysis & Synthesis report for genFace
-Wed May 26 03:30:47 2021
+Wed Jun 02 01:20:01 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -45,14 +45,14 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 26 03:30:47 2021      ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 02 01:20:01 2021      ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                   ; genFace                                    ;
 ; Top-level Entity Name           ; genFace                                    ;
 ; Family                          ; Cyclone V                                  ;
 ; Logic utilization (in ALMs)     ; N/A                                        ;
 ; Total registers                 ; 35                                         ;
-; Total pins                      ; 19                                         ;
+; Total pins                      ; 27                                         ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0                                          ;
 ; Total DSP Blocks                ; 0                                          ;
@@ -191,12 +191,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;                       ;
 ; Dedicated logic registers                   ; 35                    ;
 ;                                             ;                       ;
-; I/O pins                                    ; 19                    ;
+; I/O pins                                    ; 27                    ;
 ; Total DSP Blocks                            ; 0                     ;
 ; Maximum fan-out node                        ; scanf_gen:inst1|PULSE ;
 ; Maximum fan-out                             ; 18                    ;
-; Total fan-out                               ; 256                   ;
-; Average fan-out                             ; 2.12                  ;
+; Total fan-out                               ; 264                   ;
+; Average fan-out                             ; 1.93                  ;
 +---------------------------------------------+-----------------------+
 
 
@@ -205,21 +205,22 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Library Name ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------+--------------+
-; |genFace                   ; 48 (0)            ; 35 (0)       ; 0                 ; 0          ; 19   ; 0            ; |genFace                 ; work         ;
+; |genFace                   ; 48 (0)            ; 35 (0)       ; 0                 ; 0          ; 27   ; 0            ; |genFace                 ; work         ;
 ;    |matrixFace:inst|       ; 14 (14)           ; 17 (17)      ; 0                 ; 0          ; 0    ; 0            ; |genFace|matrixFace:inst ; work         ;
 ;    |scanf_gen:inst1|       ; 34 (34)           ; 18 (18)      ; 0                 ; 0          ; 0    ; 0            ; |genFace|scanf_gen:inst1 ; work         ;
 +----------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; matrixFace:inst|col_s[0,7]            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; matrixFace:inst|col2[0..7]             ; Stuck at GND due to stuck port data_in ;
+; matrixFace:inst|col_s[0,7]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 10 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -265,7 +266,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 6                           ;
 ;         5 data inputs ; 3                           ;
 ;         6 data inputs ; 7                           ;
-; boundary_port         ; 19                          ;
+; boundary_port         ; 27                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.60                        ;
 ; Average LUT depth     ; 2.14                        ;
@@ -287,13 +288,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Wed May 26 03:30:45 2021
+    Info: Processing started: Wed Jun 02 01:19:59 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off genFace -c genFace
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file genface.bdf
     Info (12023): Found entity 1: genFace
 Info (12127): Elaborating entity "genFace" for the top level hierarchy
 Warning (275080): Converted elements in bus name "col_s" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "col_s[0..7]" to "col_s0..7"
     Warning (275081): Converted element name(s) from "col_s[0]" to "col_s0"
     Warning (275081): Converted element name(s) from "col_s[1]" to "col_s1"
     Warning (275081): Converted element name(s) from "col_s[2]" to "col_s2"
@@ -302,9 +304,8 @@ Warning (275080): Converted elements in bus name "col_s" using legacy naming rul
     Warning (275081): Converted element name(s) from "col_s[5]" to "col_s5"
     Warning (275081): Converted element name(s) from "col_s[6]" to "col_s6"
     Warning (275081): Converted element name(s) from "col_s[7]" to "col_s7"
-    Warning (275081): Converted element name(s) from "col_s[0..7]" to "col_s0..7"
 Warning (275080): Converted elements in bus name "row_s" using legacy naming rules. Make any assignments on the new names, not on the original names.
-    Warning (275081): Converted element name(s) from "row_s[0]" to "row_s0"
+    Warning (275081): Converted element name(s) from "row_s[0..7]" to "row_s0..7"
     Warning (275081): Converted element name(s) from "row_s[1]" to "row_s1"
     Warning (275081): Converted element name(s) from "row_s[2]" to "row_s2"
     Warning (275081): Converted element name(s) from "row_s[3]" to "row_s3"
@@ -312,7 +313,7 @@ Warning (275080): Converted elements in bus name "row_s" using legacy naming rul
     Warning (275081): Converted element name(s) from "row_s[5]" to "row_s5"
     Warning (275081): Converted element name(s) from "row_s[6]" to "row_s6"
     Warning (275081): Converted element name(s) from "row_s[7]" to "row_s7"
-    Warning (275081): Converted element name(s) from "row_s[0..7]" to "row_s0..7"
+    Warning (275081): Converted element name(s) from "row_s[0]" to "row_s0"
 Warning (12125): Using design file matrixface.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: matrixFace-a
     Info (12023): Found entity 1: matrixFace
@@ -325,18 +326,26 @@ Warning (10492): VHDL Process Statement warning at scanf_gen.vhd(38): signal "PU
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "col_s0" is stuck at GND
     Warning (13410): Pin "col_s7" is stuck at GND
+    Warning (13410): Pin "col2_0" is stuck at GND
+    Warning (13410): Pin "col2_1" is stuck at GND
+    Warning (13410): Pin "col2_2" is stuck at GND
+    Warning (13410): Pin "col2_3" is stuck at GND
+    Warning (13410): Pin "col2_4" is stuck at GND
+    Warning (13410): Pin "col2_5" is stuck at GND
+    Warning (13410): Pin "col2_6" is stuck at GND
+    Warning (13410): Pin "col2_7" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "gameStatus"
-Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 16 output pins
+    Info (21059): Implemented 24 output pins
     Info (21061): Implemented 54 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4770 megabytes
-    Info: Processing ended: Wed May 26 03:30:47 2021
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4774 megabytes
+    Info: Processing ended: Wed Jun 02 01:20:01 2021
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

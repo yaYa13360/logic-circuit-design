@@ -59,6 +59,13 @@ agreement for further details.
 		(text "row_s[0..7]" (rect 127 43 171 55)(font "Arial" ))
 		(line (pt 192 48)(pt 176 48)(line_width 3))
 	)
+	(port
+		(pt 192 64)
+		(output)
+		(text "col2[0..7]" (rect 0 0 35 12)(font "Arial" ))
+		(text "col2[0..7]" (rect 136 59 171 71)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 176 96)(line_width 1))
 	)
