@@ -1,28 +1,26 @@
 |projectFull
-TSF1 <= <GND>
-TSF0 <= <GND>
-enter => CompareNum:inst1.enter
-in7 => CompareNum:inst1.u[0]
-in6 => CompareNum:inst1.u[1]
-in5 => CompareNum:inst1.u[2]
-in4 => CompareNum:inst1.u[3]
-in3 => CompareNum:inst1.u[4]
-in2 => CompareNum:inst1.u[5]
-in1 => CompareNum:inst1.u[6]
-in0 => CompareNum:inst1.u[7]
+TFS0 <= CompareNum:inst.TFS[0]
+enter => CompareNum:inst.enter
+g0 => CompareNum:inst.g[0]
+g1 => CompareNum:inst.g[1]
+g2 => CompareNum:inst.g[2]
+g3 => CompareNum:inst.g[3]
+g4 => CompareNum:inst.g[4]
+g5 => CompareNum:inst.g[5]
+g6 => CompareNum:inst.g[6]
+g7 => CompareNum:inst.g[7]
+u0 => CompareNum:inst.u[0]
+u1 => CompareNum:inst.u[1]
+u2 => CompareNum:inst.u[2]
+u3 => CompareNum:inst.u[3]
+u4 => CompareNum:inst.u[4]
+u5 => CompareNum:inst.u[5]
+u6 => CompareNum:inst.u[6]
+u7 => CompareNum:inst.u[7]
+TFS1 <= CompareNum:inst.TFS[1]
 
 
-|projectFull|countLife:inst
-touch => tempTouch.IN0
-start => tempTouch.IN1
-led[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
-led[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
-led[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
-gameStatus <= gameStatus.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectFull|CompareNum:inst1
+|projectFull|CompareNum:inst
 enter => temp2[1].CLK
 enter => temp2[0].CLK
 u[7] => temp.IN0

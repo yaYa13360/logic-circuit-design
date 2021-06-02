@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/26/2021 11:52:56"
+// Generated on "05/26/2021 15:40:50"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    projectFull
 // 
@@ -29,30 +29,46 @@
 `timescale 1 ps/ 1 ps
 module projectFull_vlg_sample_tst(
 	enter,
-	in0,
-	in1,
-	in2,
-	in3,
-	in4,
-	in5,
-	in6,
-	in7,
+	g0,
+	g1,
+	g2,
+	g3,
+	g4,
+	g5,
+	g6,
+	g7,
+	u0,
+	u1,
+	u2,
+	u3,
+	u4,
+	u5,
+	u6,
+	u7,
 	sampler_tx
 );
 input  enter;
-input  in0;
-input  in1;
-input  in2;
-input  in3;
-input  in4;
-input  in5;
-input  in6;
-input  in7;
+input  g0;
+input  g1;
+input  g2;
+input  g3;
+input  g4;
+input  g5;
+input  g6;
+input  g7;
+input  u0;
+input  u1;
+input  u2;
+input  u3;
+input  u4;
+input  u5;
+input  u6;
+input  u7;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(enter or in0 or in1 or in2 or in3 or in4 or in5 or in6 or in7)
+always @(enter or g0 or g1 or g2 or g3 or g4 or g5 or g6 or g7 or u0 or u1 or u2 or u3 or u4 or u5 or u6 or u7)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -72,25 +88,25 @@ assign sampler_tx = sample;
 endmodule
 
 module projectFull_vlg_check_tst (
-	TSF0,
-	TSF1,
+	TFS0,
+	TFS1,
 	sampler_rx
 );
-input  TSF0;
-input  TSF1;
+input  TFS0;
+input  TFS1;
 input sampler_rx;
 
-reg  TSF0_expected;
-reg  TSF1_expected;
+reg  TFS0_expected;
+reg  TFS1_expected;
 
-reg  TSF0_prev;
-reg  TSF1_prev;
+reg  TFS0_prev;
+reg  TFS1_prev;
 
-reg  TSF0_expected_prev;
-reg  TSF1_expected_prev;
+reg  TFS0_expected_prev;
+reg  TFS1_expected_prev;
 
-reg  last_TSF0_exp;
-reg  last_TSF1_exp;
+reg  last_TFS0_exp;
+reg  last_TFS1_exp;
 
 reg trigger;
 
@@ -112,33 +128,33 @@ end
 
 always @(trigger)
 begin
-	TSF0_prev = TSF0;
-	TSF1_prev = TSF1;
+	TFS0_prev = TFS0;
+	TFS1_prev = TFS1;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	TSF0_expected_prev = TSF0_expected;
-	TSF1_expected_prev = TSF1_expected;
+	TFS0_expected_prev = TFS0_expected;
+	TFS1_expected_prev = TFS1_expected;
 end
 
 
 
-// expected TSF0
+// expected TFS0
 initial
 begin
-	TSF0_expected = 1'bX;
+	TFS0_expected = 1'bX;
 end 
 
-// expected TSF1
+// expected TFS1
 initial
 begin
-	TSF1_expected = 1'bX;
+	TFS1_expected = 1'bX;
 end 
 // generate trigger
-always @(TSF0_expected or TSF0 or TSF1_expected or TSF1)
+always @(TFS0_expected or TFS0 or TFS1_expected or TFS1)
 begin
 	trigger <= ~trigger;
 end
@@ -148,34 +164,34 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected TSF0 = %b | expected TSF1 = %b | ",TSF0_expected_prev,TSF1_expected_prev);
-	$display("| real TSF0 = %b | real TSF1 = %b | ",TSF0_prev,TSF1_prev);
+	$display("| expected TFS0 = %b | expected TFS1 = %b | ",TFS0_expected_prev,TFS1_expected_prev);
+	$display("| real TFS0 = %b | real TFS1 = %b | ",TFS0_prev,TFS1_prev);
 `endif
 	if (
-		( TSF0_expected_prev !== 1'bx ) && ( TSF0_prev !== TSF0_expected_prev )
-		&& ((TSF0_expected_prev !== last_TSF0_exp) ||
+		( TFS0_expected_prev !== 1'bx ) && ( TFS0_prev !== TFS0_expected_prev )
+		&& ((TFS0_expected_prev !== last_TFS0_exp) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port TSF0 :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", TSF0_expected_prev);
-		$display ("     Real value = %b", TSF0_prev);
+		$display ("ERROR! Vector Mismatch for output port TFS0 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TFS0_expected_prev);
+		$display ("     Real value = %b", TFS0_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_TSF0_exp = TSF0_expected_prev;
+		last_TFS0_exp = TFS0_expected_prev;
 	end
 	if (
-		( TSF1_expected_prev !== 1'bx ) && ( TSF1_prev !== TSF1_expected_prev )
-		&& ((TSF1_expected_prev !== last_TSF1_exp) ||
+		( TFS1_expected_prev !== 1'bx ) && ( TFS1_prev !== TFS1_expected_prev )
+		&& ((TFS1_expected_prev !== last_TFS1_exp) ||
 			on_first_change[2])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port TSF1 :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", TSF1_expected_prev);
-		$display ("     Real value = %b", TSF1_prev);
+		$display ("ERROR! Vector Mismatch for output port TFS1 :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", TFS1_expected_prev);
+		$display ("     Real value = %b", TFS1_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[2] = 1'b0;
-		last_TSF1_exp = TSF1_expected_prev;
+		last_TFS1_exp = TFS1_expected_prev;
 	end
 
 	trigger <= ~trigger;
@@ -197,17 +213,25 @@ module projectFull_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg enter;
-reg in0;
-reg in1;
-reg in2;
-reg in3;
-reg in4;
-reg in5;
-reg in6;
-reg in7;
+reg g0;
+reg g1;
+reg g2;
+reg g3;
+reg g4;
+reg g5;
+reg g6;
+reg g7;
+reg u0;
+reg u1;
+reg u2;
+reg u3;
+reg u4;
+reg u5;
+reg u6;
+reg u7;
 // wires                                               
-wire TSF0;
-wire TSF1;
+wire TFS0;
+wire TFS1;
 
 wire sampler;                             
 
@@ -215,17 +239,73 @@ wire sampler;
 projectFull i1 (
 // port map - connection between master ports and signals/registers   
 	.enter(enter),
-	.in0(in0),
-	.in1(in1),
-	.in2(in2),
-	.in3(in3),
-	.in4(in4),
-	.in5(in5),
-	.in6(in6),
-	.in7(in7),
-	.TSF0(TSF0),
-	.TSF1(TSF1)
+	.g0(g0),
+	.g1(g1),
+	.g2(g2),
+	.g3(g3),
+	.g4(g4),
+	.g5(g5),
+	.g6(g6),
+	.g7(g7),
+	.TFS0(TFS0),
+	.TFS1(TFS1),
+	.u0(u0),
+	.u1(u1),
+	.u2(u2),
+	.u3(u3),
+	.u4(u4),
+	.u5(u5),
+	.u6(u6),
+	.u7(u7)
 );
+
+// g0
+initial
+begin
+	g0 = 1'b0;
+end 
+
+// g1
+initial
+begin
+	g1 = 1'b1;
+end 
+
+// g2
+initial
+begin
+	g2 = 1'b0;
+end 
+
+// g3
+initial
+begin
+	g3 = 1'b1;
+end 
+
+// g4
+initial
+begin
+	g4 = 1'b0;
+end 
+
+// g5
+initial
+begin
+	g5 = 1'b0;
+end 
+
+// g6
+initial
+begin
+	g6 = 1'b0;
+end 
+
+// g7
+initial
+begin
+	g7 = 1'b0;
+end 
 
 // enter
 always
@@ -235,110 +315,118 @@ begin
 	#1000;
 end 
 
-// in0
+// u0
 initial
 begin
-	in0 = 1'b0;
-	in0 = #256000 1'b1;
-	in0 = #256000 1'b0;
-	in0 = #256000 1'b1;
+	u0 = 1'b0;
+	u0 = #256000 1'b1;
+	u0 = #256000 1'b0;
+	u0 = #256000 1'b1;
 end 
 
-// in1
+// u1
 initial
 begin
 	repeat(3)
 	begin
-		in1 = 1'b0;
-		in1 = #128000 1'b1;
+		u1 = 1'b0;
+		u1 = #128000 1'b1;
 		# 128000;
 	end
-	in1 = 1'b0;
-	in1 = #128000 1'b1;
+	u1 = 1'b0;
+	u1 = #128000 1'b1;
 end 
 
-// in2
+// u2
 initial
 begin
 	repeat(7)
 	begin
-		in2 = 1'b0;
-		in2 = #64000 1'b1;
+		u2 = 1'b0;
+		u2 = #64000 1'b1;
 		# 64000;
 	end
-	in2 = 1'b0;
-	in2 = #64000 1'b1;
+	u2 = 1'b0;
+	u2 = #64000 1'b1;
 end 
 
-// in3
+// u3
 initial
 begin
 	repeat(15)
 	begin
-		in3 = 1'b0;
-		in3 = #32000 1'b1;
+		u3 = 1'b0;
+		u3 = #32000 1'b1;
 		# 32000;
 	end
-	in3 = 1'b0;
-	in3 = #32000 1'b1;
+	u3 = 1'b0;
+	u3 = #32000 1'b1;
 end 
 
-// in4
+// u4
 initial
 begin
 	repeat(31)
 	begin
-		in4 = 1'b0;
-		in4 = #16000 1'b1;
+		u4 = 1'b0;
+		u4 = #16000 1'b1;
 		# 16000;
 	end
-	in4 = 1'b0;
+	u4 = 1'b0;
 end 
 
-// in5
+// u5
 initial
 begin
 	repeat(62)
 	begin
-		in5 = 1'b0;
-		in5 = #8000 1'b1;
+		u5 = 1'b0;
+		u5 = #8000 1'b1;
 		# 8000;
 	end
-	in5 = 1'b0;
+	u5 = 1'b0;
 end 
 
-// in6
+// u6
 always
 begin
-	in6 = 1'b0;
-	in6 = #4000 1'b1;
+	u6 = 1'b0;
+	u6 = #4000 1'b1;
 	#4000;
 end 
 
-// in7
+// u7
 always
 begin
-	in7 = 1'b0;
-	in7 = #2000 1'b1;
+	u7 = 1'b0;
+	u7 = #2000 1'b1;
 	#2000;
 end 
 
 projectFull_vlg_sample_tst tb_sample (
 	.enter(enter),
-	.in0(in0),
-	.in1(in1),
-	.in2(in2),
-	.in3(in3),
-	.in4(in4),
-	.in5(in5),
-	.in6(in6),
-	.in7(in7),
+	.g0(g0),
+	.g1(g1),
+	.g2(g2),
+	.g3(g3),
+	.g4(g4),
+	.g5(g5),
+	.g6(g6),
+	.g7(g7),
+	.u0(u0),
+	.u1(u1),
+	.u2(u2),
+	.u3(u3),
+	.u4(u4),
+	.u5(u5),
+	.u6(u6),
+	.u7(u7),
 	.sampler_tx(sampler)
 );
 
 projectFull_vlg_check_tst tb_out(
-	.TSF0(TSF0),
-	.TSF1(TSF1),
+	.TFS0(TFS0),
+	.TFS1(TFS1),
 	.sampler_rx(sampler)
 );
 endmodule

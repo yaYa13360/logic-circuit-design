@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\altera\14.0\projectFull\simulation\qsim
 vprojectFull
-Z1 I12XX3eb`dd:j5fGn?n6SQ1
-Z2 VcFiI2N2^RPT^;GQ8dhcbG2
-Z3 dC:\altera\14.0\projectFull\simulation\qsim
-Z4 w1622001179
-Z5 8projectFull.vo
-Z6 FprojectFull.vo
+Z1 !s100 ba^dA@M?O7=?fz1;@lEoY3
+Z2 IhQdW[6=;ZP=L9WF_<en?[0
+Z3 VfFzJclHbQ`El8M4n2M>5g1
+Z4 dC:\CircuitFinalProject\logic-circuit-design\projectFull\simulation\qsim
+Z5 w1622014853
+Z6 8projectFull.vo
+Z7 FprojectFull.vo
 L0 32
-Z7 OV;L;10.1e;51
+Z8 OV;L;10.1e;51
 r1
 31
-Z8 !s90 -work|work|projectFull.vo|
-Z9 o-work work -O0
-Z10 nproject@full
+Z9 !s90 -work|work|projectFull.vo|
+Z10 o-work work -O0
+Z11 nproject@full
 !i10b 1
-Z11 !s100 Y<J@`kQFLlBT[2eC8WBn32
 !s85 0
-Z12 !s108 1622001180.710000
+Z12 !s108 1622014853.873000
 Z13 !s107 projectFull.vo|
 !s101 -O0
 vprojectFull_vlg_check_tst
 !i10b 1
-!s100 fT:KaEGdk^`AL26DR0kCb2
-I>Db;NbY9i;Zo;9Adic0fn3
-Z14 VENE7OXTC>3<EYNIRK?ZS<2
-R3
-Z15 w1622001176
-Z16 8Waveform.vwf.vt
-Z17 FWaveform.vwf.vt
-L0 74
-R7
+Z14 !s100 9Q6;4ZK]b]bCXRCb9J62G2
+Z15 IQ6:kXbi^A2:095]Z>8C@m3
+Z16 Vj>2b1362o;We1<Mo6:o@82
+R4
+Z17 w1622014850
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
+L0 90
+R8
 r1
 !s85 0
 31
-Z18 !s108 1622001180.798000
-Z19 !s107 Waveform.vwf.vt|
-Z20 !s90 -work|work|Waveform.vwf.vt|
+Z20 !s108 1622014853.938000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
 !s101 -O0
-R9
-Z21 nproject@full_vlg_check_tst
+R10
+Z23 nproject@full_vlg_check_tst
 vprojectFull_vlg_sample_tst
 !i10b 1
-!s100 ZP;;<<;3fYjU<mcd098Gk3
-IbMGW7gN@PX<ibAaPCm?ok1
-VKEoV[iiB6]YB2MndOP6dG2
-R3
-R15
-R16
+Z24 !s100 [mGHN5F`W8XgcPTSM3_Nf0
+Z25 IZdFU[`a1FMgQ_D[k42H8G0
+Z26 VN0M37h5^6?M2LTJi8P2Ko0
+R4
 R17
+R18
+R19
 L0 30
-R7
+R8
 r1
 !s85 0
 31
-R18
-R19
 R20
+R21
+R22
 !s101 -O0
-R9
-Z22 nproject@full_vlg_sample_tst
+R10
+Z27 nproject@full_vlg_sample_tst
 vprojectFull_vlg_vec_tst
 !i10b 1
-!s100 T:fHAI=eg]19BO5JY0TA=2
-I`kCjI_CVjP`35:b;o5o5O3
-Z23 VTI1kaj]kE>CKXkz5JEY]S0
-R3
-R15
-R16
+Z28 !s100 DlEoXFcICY3H`G@o1G[0K3
+Z29 IeVdS1?ZjFVFOIbP4>H]2B1
+Z30 VTI1kaj]kE>CKXkz5JEY]S0
+R4
 R17
-L0 196
-R7
+R18
+R19
+Z31 L0 212
+R8
 r1
 !s85 0
 31
-R18
-R19
 R20
+R21
+R22
 !s101 -O0
-R9
-Z24 nproject@full_vlg_vec_tst
+R10
+Z32 nproject@full_vlg_vec_tst

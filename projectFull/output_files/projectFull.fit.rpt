@@ -1,5 +1,5 @@
 Fitter report for projectFull
-Wed May 26 11:48:35 2021
+Wed May 26 15:34:24 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -11,27 +11,31 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   3. Fitter Settings
   4. Parallel Compilation
   5. I/O Assignment Warnings
-  6. Incremental Compilation Preservation Summary
-  7. Incremental Compilation Partition Settings
-  8. Incremental Compilation Placement Preservation
-  9. Pin-Out File
- 10. Fitter Resource Usage Summary
- 11. Fitter Partition Statistics
- 12. Input Pins
- 13. Output Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. Fitter Resource Utilization by Entity
- 17. Delay Chain Summary
- 18. Pad To Core Delay Chain Fanout
- 19. Routing Usage Summary
- 20. I/O Rules Summary
- 21. I/O Rules Details
- 22. I/O Rules Matrix
- 23. Fitter Device Options
- 24. Operating Settings and Conditions
- 25. Fitter Messages
- 26. Fitter Suppressed Messages
+  6. Fitter Netlist Optimizations
+  7. Incremental Compilation Preservation Summary
+  8. Incremental Compilation Partition Settings
+  9. Incremental Compilation Placement Preservation
+ 10. Pin-Out File
+ 11. Fitter Resource Usage Summary
+ 12. Fitter Partition Statistics
+ 13. Input Pins
+ 14. Output Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
+ 17. Fitter Resource Utilization by Entity
+ 18. Delay Chain Summary
+ 19. Pad To Core Delay Chain Fanout
+ 20. Control Signals
+ 21. Global & Other Fast Signals
+ 22. Non-Global High Fan-Out Signals
+ 23. Routing Usage Summary
+ 24. I/O Rules Summary
+ 25. I/O Rules Details
+ 26. I/O Rules Matrix
+ 27. Fitter Device Options
+ 28. Operating Settings and Conditions
+ 29. Fitter Messages
+ 30. Fitter Suppressed Messages
 
 
 
@@ -58,16 +62,16 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Fitter Summary                                                               ;
 +---------------------------------+--------------------------------------------+
-; Fitter Status                   ; Successful - Wed May 26 11:48:35 2021      ;
+; Fitter Status                   ; Successful - Wed May 26 15:34:24 2021      ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                   ; projectFull                                ;
 ; Top-level Entity Name           ; projectFull                                ;
 ; Family                          ; Cyclone V                                  ;
 ; Device                          ; 5CGXFC7C7F23C8                             ;
 ; Timing Models                   ; Final                                      ;
-; Logic utilization (in ALMs)     ; 1 / 56,480 ( < 1 % )                       ;
-; Total registers                 ; 0                                          ;
-; Total pins                      ; 11 / 268 ( 4 % )                           ;
+; Logic utilization (in ALMs)     ; 4 / 56,480 ( < 1 % )                       ;
+; Total registers                 ; 2                                          ;
+; Total pins                      ; 19 / 268 ( 7 % )                           ;
 ; Total virtual pins              ; 0                                          ;
 ; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                      ;
 ; Total DSP Blocks                ; 0 / 156 ( 0 % )                            ;
@@ -144,12 +148,12 @@ agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.88        ;
+; Average used               ; 1.94        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  29.4%      ;
+;     Processors 2-4         ;  31.3%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -159,18 +163,35 @@ agreement for further details.
 +----------+-------------------------------+
 ; Pin Name ; Reason                        ;
 +----------+-------------------------------+
-; TSF1     ; Incomplete set of assignments ;
-; TSF0     ; Incomplete set of assignments ;
+; TFS0     ; Incomplete set of assignments ;
+; TFS1     ; Incomplete set of assignments ;
+; g5       ; Incomplete set of assignments ;
+; u5       ; Incomplete set of assignments ;
+; g0       ; Incomplete set of assignments ;
+; u0       ; Incomplete set of assignments ;
+; g1       ; Incomplete set of assignments ;
+; u1       ; Incomplete set of assignments ;
+; g2       ; Incomplete set of assignments ;
+; u2       ; Incomplete set of assignments ;
+; g3       ; Incomplete set of assignments ;
+; u3       ; Incomplete set of assignments ;
+; g4       ; Incomplete set of assignments ;
+; u4       ; Incomplete set of assignments ;
+; g6       ; Incomplete set of assignments ;
+; u6       ; Incomplete set of assignments ;
+; g7       ; Incomplete set of assignments ;
+; u7       ; Incomplete set of assignments ;
 ; enter    ; Incomplete set of assignments ;
-; in7      ; Incomplete set of assignments ;
-; in6      ; Incomplete set of assignments ;
-; in5      ; Incomplete set of assignments ;
-; in4      ; Incomplete set of assignments ;
-; in3      ; Incomplete set of assignments ;
-; in2      ; Incomplete set of assignments ;
-; in1      ; Incomplete set of assignments ;
-; in0      ; Incomplete set of assignments ;
 +----------+-------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Netlist Optimizations                                                                                                                                     ;
++--------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
+; Node               ; Action  ; Operation ; Reason                     ; Node Port ; Node Port Name ; Destination Node ; Destination Port ; Destination Port Name ;
++--------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
+; enter~inputCLKENA0 ; Created ; Placement ; Fitter Periphery Placement ;           ;                ;                  ;                  ;                       ;
++--------------------+---------+-----------+----------------------------+-----------+----------------+------------------+------------------+-----------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -179,8 +200,8 @@ agreement for further details.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 23 ) ; 0.00 % ( 0 / 23 )          ; 0.00 % ( 0 / 23 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 23 ) ; 0.00 % ( 0 / 23 )          ; 0.00 % ( 0 / 23 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 47 ) ; 0.00 % ( 0 / 47 )          ; 0.00 % ( 0 / 47 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 47 ) ; 0.00 % ( 0 / 47 )          ; 0.00 % ( 0 / 47 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -203,7 +224,7 @@ agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 23 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 47 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -211,7 +232,7 @@ agreement for further details.
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/altera/14.0/projectFull/output_files/projectFull.pin.
+The pin-out file can be found in C:/CircuitFinalProject/logic-circuit-design/projectFull/output_files/projectFull.pin.
 
 
 +------------------------------------------------------------------------------------------+
@@ -219,11 +240,11 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 1 / 56,480         ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 1                  ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 1 / 56,480         ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 0                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 1                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 4 / 56,480         ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 4                  ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 4 / 56,480         ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 1                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 3                  ;       ;
 ;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 56,480         ; 0 %   ;
@@ -235,38 +256,38 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ;                                                             ;                    ;       ;
 ; Difficulty packing design                                   ; Low                ;       ;
 ;                                                             ;                    ;       ;
-; Total LABs:  partially or completely used                   ; 1 / 5,648          ; < 1 % ;
-;     -- Logic LABs                                           ; 1                  ;       ;
+; Total LABs:  partially or completely used                   ; 2 / 5,648          ; < 1 % ;
+;     -- Logic LABs                                           ; 2                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 1                  ;       ;
+; Combinational ALUT usage for logic                          ; 6                  ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 0                  ;       ;
-;     -- 5 input functions                                    ; 0                  ;       ;
-;     -- 4 input functions                                    ; 0                  ;       ;
-;     -- <=3 input functions                                  ; 1                  ;       ;
+;     -- 6 input functions                                    ; 1                  ;       ;
+;     -- 5 input functions                                    ; 1                  ;       ;
+;     -- 4 input functions                                    ; 2                  ;       ;
+;     -- <=3 input functions                                  ; 2                  ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
-; Dedicated logic registers                                   ; 0                  ;       ;
+; Dedicated logic registers                                   ; 2                  ;       ;
 ;     -- By type:                                             ;                    ;       ;
-;         -- Primary logic registers                          ; 0 / 112,960        ; 0 %   ;
+;         -- Primary logic registers                          ; 2 / 112,960        ; < 1 % ;
 ;         -- Secondary logic registers                        ; 0 / 112,960        ; 0 %   ;
 ;     -- By function:                                         ;                    ;       ;
-;         -- Design implementation registers                  ; 0                  ;       ;
+;         -- Design implementation registers                  ; 2                  ;       ;
 ;         -- Routing optimization registers                   ; 0                  ;       ;
 ;                                                             ;                    ;       ;
 ; Virtual pins                                                ; 0                  ;       ;
-; I/O pins                                                    ; 11 / 268           ; 4 %   ;
-;     -- Clock pins                                           ; 0 / 11             ; 0 %   ;
+; I/O pins                                                    ; 19 / 268           ; 7 %   ;
+;     -- Clock pins                                           ; 2 / 11             ; 18 %  ;
 ;     -- Dedicated input pins                                 ; 0 / 23             ; 0 %   ;
 ;                                                             ;                    ;       ;
-; Global signals                                              ; 0                  ;       ;
+; Global signals                                              ; 1                  ;       ;
 ; M10K blocks                                                 ; 0 / 686            ; 0 %   ;
 ; Total MLAB memory bits                                      ; 0                  ;       ;
 ; Total block memory bits                                     ; 0 / 7,024,640      ; 0 %   ;
 ; Total block memory implementation bits                      ; 0 / 7,024,640      ; 0 %   ;
 ; Total DSP Blocks                                            ; 0 / 156            ; 0 %   ;
 ; Fractional PLLs                                             ; 0 / 7              ; 0 %   ;
-; Global clocks                                               ; 0 / 16             ; 0 %   ;
+; Global clocks                                               ; 1 / 16             ; 6 %   ;
 ; Quadrant clocks                                             ; 0 / 88             ; 0 %   ;
 ; Horizontal periphery clocks                                 ; 0 / 18             ; 0 %   ;
 ; SERDES Transmitters                                         ; 0 / 120            ; 0 %   ;
@@ -284,98 +305,99 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; Impedance control blocks                                    ; 0 / 3              ; 0 %   ;
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
-; Peak interconnect usage (total/H/V)                         ; 0.0% / 0.0% / 0.0% ;       ;
-; Maximum fan-out                                             ; 1                  ;       ;
-; Highest non-global fan-out                                  ; 1                  ;       ;
-; Total fan-out                                               ; 11                 ;       ;
-; Average fan-out                                             ; 0.48               ;       ;
+; Peak interconnect usage (total/H/V)                         ; 0.2% / 0.2% / 0.2% ;       ;
+; Maximum fan-out                                             ; 2                  ;       ;
+; Highest non-global fan-out                                  ; 2                  ;       ;
+; Total fan-out                                               ; 46                 ;       ;
+; Average fan-out                                             ; 0.98               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Fitter Partition Statistics                                                                                        ;
-+-------------------------------------------------------------+---------------------+--------------------------------+
-; Statistic                                                   ; Top                 ; hard_block:auto_generated_inst ;
-+-------------------------------------------------------------+---------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 1 / 56480 ( < 1 % ) ; 0 / 56480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 1                   ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 1 / 56480 ( < 1 % ) ; 0 / 56480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 0                   ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 1                   ; 0                              ;
-;         [c] ALMs used for registers                         ; 0                   ; 0                              ;
-;         [d] ALMs used for memory (up to half of total ALMs) ; 0                   ; 0                              ;
-;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 56480 ( 0 % )   ; 0 / 56480 ( 0 % )              ;
-;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 56480 ( 0 % )   ; 0 / 56480 ( 0 % )              ;
-;         [a] Due to location constrained logic               ; 0                   ; 0                              ;
-;         [b] Due to LAB-wide signal conflicts                ; 0                   ; 0                              ;
-;         [c] Due to LAB input limits                         ; 0                   ; 0                              ;
-;         [d] Due to virtual I/Os                             ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Difficulty packing design                                   ; Low                 ; Low                            ;
-;                                                             ;                     ;                                ;
-; Total LABs:  partially or completely used                   ; 1 / 5648 ( < 1 % )  ; 0 / 5648 ( 0 % )               ;
-;     -- Logic LABs                                           ; 1                   ; 0                              ;
-;     -- Memory LABs (up to half of total LABs)               ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Combinational ALUT usage for logic                          ; 1                   ; 0                              ;
-;     -- 7 input functions                                    ; 0                   ; 0                              ;
-;     -- 6 input functions                                    ; 0                   ; 0                              ;
-;     -- 5 input functions                                    ; 0                   ; 0                              ;
-;     -- 4 input functions                                    ; 0                   ; 0                              ;
-;     -- <=3 input functions                                  ; 1                   ; 0                              ;
-; Combinational ALUT usage for route-throughs                 ; 0                   ; 0                              ;
-; Memory ALUT usage                                           ; 0                   ; 0                              ;
-;     -- 64-address deep                                      ; 0                   ; 0                              ;
-;     -- 32-address deep                                      ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Dedicated logic registers                                   ; 0                   ; 0                              ;
-;     -- By type:                                             ;                     ;                                ;
-;         -- Primary logic registers                          ; 0 / 112960 ( 0 % )  ; 0 / 112960 ( 0 % )             ;
-;         -- Secondary logic registers                        ; 0 / 112960 ( 0 % )  ; 0 / 112960 ( 0 % )             ;
-;     -- By function:                                         ;                     ;                                ;
-;         -- Design implementation registers                  ; 0                   ; 0                              ;
-;         -- Routing optimization registers                   ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-;                                                             ;                     ;                                ;
-; Virtual pins                                                ; 0                   ; 0                              ;
-; I/O pins                                                    ; 11                  ; 0                              ;
-; I/O registers                                               ; 0                   ; 0                              ;
-; Total block memory bits                                     ; 0                   ; 0                              ;
-; Total block memory implementation bits                      ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Connections                                                 ;                     ;                                ;
-;     -- Input Connections                                    ; 0                   ; 0                              ;
-;     -- Registered Input Connections                         ; 0                   ; 0                              ;
-;     -- Output Connections                                   ; 0                   ; 0                              ;
-;     -- Registered Output Connections                        ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Internal Connections                                        ;                     ;                                ;
-;     -- Total Connections                                    ; 11                  ; 0                              ;
-;     -- Registered Connections                               ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; External Connections                                        ;                     ;                                ;
-;     -- Top                                                  ; 0                   ; 0                              ;
-;     -- hard_block:auto_generated_inst                       ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Partition Interface                                         ;                     ;                                ;
-;     -- Input Ports                                          ; 9                   ; 0                              ;
-;     -- Output Ports                                         ; 2                   ; 0                              ;
-;     -- Bidir Ports                                          ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Registered Ports                                            ;                     ;                                ;
-;     -- Registered Input Ports                               ; 0                   ; 0                              ;
-;     -- Registered Output Ports                              ; 0                   ; 0                              ;
-;                                                             ;                     ;                                ;
-; Port Connectivity                                           ;                     ;                                ;
-;     -- Input Ports driven by GND                            ; 0                   ; 0                              ;
-;     -- Output Ports driven by GND                           ; 0                   ; 0                              ;
-;     -- Input Ports driven by VCC                            ; 0                   ; 0                              ;
-;     -- Output Ports driven by VCC                           ; 0                   ; 0                              ;
-;     -- Input Ports with no Source                           ; 0                   ; 0                              ;
-;     -- Output Ports with no Source                          ; 0                   ; 0                              ;
-;     -- Input Ports with no Fanout                           ; 0                   ; 0                              ;
-;     -- Output Ports with no Fanout                          ; 0                   ; 0                              ;
-+-------------------------------------------------------------+---------------------+--------------------------------+
++---------------------------------------------------------------------------------------------------------------------+
+; Fitter Partition Statistics                                                                                         ;
++-------------------------------------------------------------+----------------------+--------------------------------+
+; Statistic                                                   ; Top                  ; hard_block:auto_generated_inst ;
++-------------------------------------------------------------+----------------------+--------------------------------+
+; Logic utilization (ALMs needed / total ALMs on device)      ; 4 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 4                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 4 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 1                    ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 3                    ; 0                              ;
+;         [c] ALMs used for registers                         ; 0                    ; 0                              ;
+;         [d] ALMs used for memory (up to half of total ALMs) ; 0                    ; 0                              ;
+;     [B] Estimate of ALMs recoverable by dense packing       ; 0 / 56480 ( 0 % )    ; 0 / 56480 ( 0 % )              ;
+;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 56480 ( 0 % )    ; 0 / 56480 ( 0 % )              ;
+;         [a] Due to location constrained logic               ; 0                    ; 0                              ;
+;         [b] Due to LAB-wide signal conflicts                ; 0                    ; 0                              ;
+;         [c] Due to LAB input limits                         ; 0                    ; 0                              ;
+;         [d] Due to virtual I/Os                             ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Difficulty packing design                                   ; Low                  ; Low                            ;
+;                                                             ;                      ;                                ;
+; Total LABs:  partially or completely used                   ; 2 / 5648 ( < 1 % )   ; 0 / 5648 ( 0 % )               ;
+;     -- Logic LABs                                           ; 2                    ; 0                              ;
+;     -- Memory LABs (up to half of total LABs)               ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Combinational ALUT usage for logic                          ; 6                    ; 0                              ;
+;     -- 7 input functions                                    ; 0                    ; 0                              ;
+;     -- 6 input functions                                    ; 1                    ; 0                              ;
+;     -- 5 input functions                                    ; 1                    ; 0                              ;
+;     -- 4 input functions                                    ; 2                    ; 0                              ;
+;     -- <=3 input functions                                  ; 2                    ; 0                              ;
+; Combinational ALUT usage for route-throughs                 ; 0                    ; 0                              ;
+; Memory ALUT usage                                           ; 0                    ; 0                              ;
+;     -- 64-address deep                                      ; 0                    ; 0                              ;
+;     -- 32-address deep                                      ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Dedicated logic registers                                   ; 0                    ; 0                              ;
+;     -- By type:                                             ;                      ;                                ;
+;         -- Primary logic registers                          ; 2 / 112960 ( < 1 % ) ; 0 / 112960 ( 0 % )             ;
+;         -- Secondary logic registers                        ; 0 / 112960 ( 0 % )   ; 0 / 112960 ( 0 % )             ;
+;     -- By function:                                         ;                      ;                                ;
+;         -- Design implementation registers                  ; 2                    ; 0                              ;
+;         -- Routing optimization registers                   ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+;                                                             ;                      ;                                ;
+; Virtual pins                                                ; 0                    ; 0                              ;
+; I/O pins                                                    ; 19                   ; 0                              ;
+; I/O registers                                               ; 0                    ; 0                              ;
+; Total block memory bits                                     ; 0                    ; 0                              ;
+; Total block memory implementation bits                      ; 0                    ; 0                              ;
+; Clock enable block                                          ; 1 / 122 ( < 1 % )    ; 0 / 122 ( 0 % )                ;
+;                                                             ;                      ;                                ;
+; Connections                                                 ;                      ;                                ;
+;     -- Input Connections                                    ; 0                    ; 0                              ;
+;     -- Registered Input Connections                         ; 0                    ; 0                              ;
+;     -- Output Connections                                   ; 0                    ; 0                              ;
+;     -- Registered Output Connections                        ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Internal Connections                                        ;                      ;                                ;
+;     -- Total Connections                                    ; 46                   ; 0                              ;
+;     -- Registered Connections                               ; 2                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; External Connections                                        ;                      ;                                ;
+;     -- Top                                                  ; 0                    ; 0                              ;
+;     -- hard_block:auto_generated_inst                       ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Partition Interface                                         ;                      ;                                ;
+;     -- Input Ports                                          ; 17                   ; 0                              ;
+;     -- Output Ports                                         ; 2                    ; 0                              ;
+;     -- Bidir Ports                                          ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Registered Ports                                            ;                      ;                                ;
+;     -- Registered Input Ports                               ; 0                    ; 0                              ;
+;     -- Registered Output Ports                              ; 0                    ; 0                              ;
+;                                                             ;                      ;                                ;
+; Port Connectivity                                           ;                      ;                                ;
+;     -- Input Ports driven by GND                            ; 0                    ; 0                              ;
+;     -- Output Ports driven by GND                           ; 0                    ; 0                              ;
+;     -- Input Ports driven by VCC                            ; 0                    ; 0                              ;
+;     -- Output Ports driven by VCC                           ; 0                    ; 0                              ;
+;     -- Input Ports with no Source                           ; 0                    ; 0                              ;
+;     -- Output Ports with no Source                          ; 0                    ; 0                              ;
+;     -- Input Ports with no Fanout                           ; 0                    ; 0                              ;
+;     -- Output Ports with no Fanout                          ; 0                    ; 0                              ;
++-------------------------------------------------------------+----------------------+--------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -383,15 +405,23 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
-; enter ; T22   ; 5A       ; 89           ; 6            ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in0   ; P17   ; 5A       ; 89           ; 9            ; 20           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in1   ; T20   ; 5A       ; 89           ; 4            ; 94           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in2   ; P18   ; 5A       ; 89           ; 9            ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in3   ; R22   ; 5A       ; 89           ; 6            ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in4   ; R21   ; 5A       ; 89           ; 8            ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in5   ; T19   ; 5A       ; 89           ; 4            ; 77           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in6   ; P19   ; 5A       ; 89           ; 9            ; 37           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
-; in7   ; P22   ; 5A       ; 89           ; 8            ; 54           ; 0                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; enter ; M16   ; 5B       ; 89           ; 35           ; 60           ; 2                     ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g0    ; G18   ; 7A       ; 68           ; 81           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g1    ; C15   ; 7A       ; 62           ; 81           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g2    ; G17   ; 7A       ; 70           ; 81           ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g3    ; G15   ; 7A       ; 62           ; 81           ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g4    ; D17   ; 7A       ; 70           ; 81           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g5    ; B13   ; 7A       ; 60           ; 81           ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g6    ; F15   ; 7A       ; 66           ; 81           ; 57           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; g7    ; H15   ; 7A       ; 64           ; 81           ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u0    ; H16   ; 7A       ; 64           ; 81           ; 0            ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u1    ; A14   ; 7A       ; 66           ; 81           ; 91           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u2    ; K16   ; 7A       ; 64           ; 81           ; 51           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u3    ; A15   ; 7A       ; 66           ; 81           ; 74           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u4    ; H18   ; 7A       ; 68           ; 81           ; 17           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u5    ; J18   ; 7A       ; 68           ; 81           ; 51           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u6    ; J17   ; 7A       ; 64           ; 81           ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; u7    ; J19   ; 7A       ; 68           ; 81           ; 34           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
@@ -400,8 +430,8 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; TSF0 ; P16   ; 5A       ; 89           ; 9            ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; TSF1 ; T18   ; 5A       ; 89           ; 4            ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; TFS0 ; F14   ; 7A       ; 62           ; 81           ; 51           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; TFS1 ; E15   ; 7A       ; 66           ; 81           ; 40           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
@@ -416,9 +446,9 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; 3A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 3B       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 ; 4A       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 11 / 16 ( 69 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 18 / 80 ( 23 % ) ; 2.5V          ; --           ; 2.5V          ;
 ; 8A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
 +----------+------------------+---------------+--------------+---------------+
 
@@ -441,8 +471,8 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; A11      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; A12      ; 444        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A13      ; 432        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A14      ; 420        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; A15      ; 418        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; A14      ; 420        ; 7A       ; u1                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; A15      ; 418        ; 7A       ; u3                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; A16      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; A17      ; 403        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; A18      ; 401        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -506,7 +536,7 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; B10      ; 465        ; 8A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B11      ; 452        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B12      ; 442        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; B13      ; 430        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; B13      ; 430        ; 7A       ; g5                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; B14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; B15      ; 427        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; B16      ; 406        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -530,7 +560,7 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; C12      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; C13      ; 443        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C14      ;            ; 7A       ; VREFB7AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; C15      ; 425        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; C15      ; 425        ; 7A       ; g1                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; C16      ; 408        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; C17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; C18      ; 395        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -554,7 +584,7 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; D14      ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D15      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D16      ;            ; --       ; VCCPD7A8A                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; D17      ; 409        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; D17      ; 409        ; 7A       ; g4                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; D18      ;            ; --       ; VCC_AUX                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; D19      ; 379        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; D20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -574,7 +604,7 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; E12      ; 451        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E14      ; 433        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; E15      ; 417        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; E15      ; 417        ; 7A       ; TFS1                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; E16      ; 411        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; E17      ;            ;          ; DNU                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; E18      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -595,8 +625,8 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; F11      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; F12      ; 440        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; F13      ; 435        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F14      ; 428        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; F15      ; 419        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; F14      ; 428        ; 7A       ; TFS0                            ; output ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; F15      ; 419        ; 7A       ; g6                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; F16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F17      ; 372        ; 7A       ; ^GND                            ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; F18      ; 399        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -618,10 +648,10 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; G12      ; 447        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G13      ; 439        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G14      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; G15      ; 426        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G15      ; 426        ; 7A       ; g3                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; G16      ; 412        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G17      ; 410        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; G18      ; 413        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; G17      ; 410        ; 7A       ; g2                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; G18      ; 413        ; 7A       ; g0                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; G19      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; G20      ; 389        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; G21      ; 375        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -640,10 +670,10 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; H12      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; H13      ; 437        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H14      ; 429        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H15      ; 423        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; H16      ; 421        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H15      ; 423        ; 7A       ; g7                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; H16      ; 421        ; 7A       ; u0                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H17      ;            ; 7A       ; VCCIO7A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; H18      ; 415        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; H18      ; 415        ; 7A       ; u4                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; H19      ;            ; --       ; VCCA_FPLL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; H20      ; 391        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; H21      ; 373        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -664,9 +694,9 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; J14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; J15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; J17      ; 422        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J18      ; 416        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; J19      ; 414        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; J17      ; 422        ; 7A       ; u6                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J18      ; 416        ; 7A       ; u5                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
+; J19      ; 414        ; 7A       ; u7                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; J20      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; J21      ; 381        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; J22      ; 383        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -685,7 +715,7 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; K13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; K16      ; 424        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
+; K16      ; 424        ; 7A       ; u2                              ; input  ; 2.5 V        ;                     ; Column I/O   ; N               ; no       ; Off          ;
 ; K17      ; 284        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 407        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
@@ -729,7 +759,7 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; M13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; M14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; M16      ; 278        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; M16      ; 278        ; 5B       ; enter                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M17      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; M18      ; 282        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; M19      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -773,13 +803,13 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; P13      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; P14      ; 168        ; 4A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; P15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; P16      ; 225        ; 5A       ; TSF0                            ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; P17      ; 227        ; 5A       ; in0                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; P18      ; 226        ; 5A       ; in2                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; P19      ; 224        ; 5A       ; in6                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; P16      ; 225        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; P17      ; 227        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; P18      ; 226        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; P19      ; 224        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P20      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; P21      ;            ; 5A       ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; P22      ; 222        ; 5A       ; in7                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; P22      ; 222        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; R1       ; 31         ; B0L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; R2       ; 30         ; B0L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; R3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -800,8 +830,8 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; R18      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; R19      ;            ; --       ; VCCPGM                          ; power  ;              ; 1.8V/2.5V/3.0V/3.3V ; --           ;                 ; --       ; --           ;
 ; R20      ;            ; 5A       ; VREFB5AN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
-; R21      ; 220        ; 5A       ; in4                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; R22      ; 218        ; 5A       ; in3                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; R21      ; 220        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; R22      ; 218        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T3       ;            ; --       ; VCCH_GXBL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -819,11 +849,11 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 ; T15      ; 217        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T16      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; T17      ; 215        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; T18      ; 213        ; 5A       ; TSF1                            ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; T19      ; 212        ; 5A       ; in5                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; T20      ; 214        ; 5A       ; in1                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; T18      ; 213        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; T19      ; 212        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; T20      ; 214        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; T21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; T22      ; 216        ; 5A       ; enter                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; T22      ; 216        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; U1       ; 32         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U2       ; 33         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; U3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -916,13 +946,14 @@ The pin-out file can be found in C:/altera/14.0/projectFull/output_files/project
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                    ;
-+----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+--------------+
-; |projectFull               ; 0.5 (0.5)            ; 0.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 1 (1)               ; 0 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 11   ; 0            ; |projectFull        ; work         ;
-+----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                             ;
++----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------+--------------+
+; |projectFull               ; 3.5 (0.5)            ; 3.5 (0.5)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 6 (1)               ; 2 (0)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 19   ; 0            ; |projectFull                 ; work         ;
+;    |CompareNum:inst|       ; 3.0 (3.0)            ; 3.0 (3.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 5 (5)               ; 2 (2)                     ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |projectFull|CompareNum:inst ; work         ;
++----------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -931,61 +962,142 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 ; Name  ; Pin Type ; D1 ; D3_0 ; D3_1 ; D4 ; D5   ; D5 OE ; D5 OCT ; T11 (Postamble Gating) ; T11 (Postamble Ungating) ;
 +-------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
-; TSF1  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; TSF0  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
-; enter ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in7   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in6   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in5   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in4   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in3   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in2   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in1   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; in0   ; Input    ; -- ; --   ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; TFS0  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; TFS1  ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
+; g5    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u5    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g0    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u0    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g1    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u1    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g2    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u2    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g3    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u3    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g4    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u4    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g6    ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u6    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; g7    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; u7    ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; enter ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
 
-+---------------------------------------------------+
-; Pad To Core Delay Chain Fanout                    ;
-+---------------------+-------------------+---------+
-; Source Pin / Fanout ; Pad To Core Index ; Setting ;
-+---------------------+-------------------+---------+
-; enter               ;                   ;         ;
-; in7                 ;                   ;         ;
-; in6                 ;                   ;         ;
-; in5                 ;                   ;         ;
-; in4                 ;                   ;         ;
-; in3                 ;                   ;         ;
-; in2                 ;                   ;         ;
-; in1                 ;                   ;         ;
-; in0                 ;                   ;         ;
-+---------------------+-------------------+---------+
++-------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                              ;
++-------------------------------+-------------------+---------+
+; Source Pin / Fanout           ; Pad To Core Index ; Setting ;
++-------------------------------+-------------------+---------+
+; g5                            ;                   ;         ;
+;      - CompareNum:inst|temp   ; 1                 ; 0       ;
+; u5                            ;                   ;         ;
+;      - CompareNum:inst|temp   ; 1                 ; 0       ;
+; g0                            ;                   ;         ;
+;      - CompareNum:inst|temp~0 ; 1                 ; 0       ;
+; u0                            ;                   ;         ;
+;      - CompareNum:inst|temp~0 ; 1                 ; 0       ;
+; g1                            ;                   ;         ;
+;      - CompareNum:inst|temp~0 ; 0                 ; 0       ;
+; u1                            ;                   ;         ;
+;      - CompareNum:inst|temp~0 ; 0                 ; 0       ;
+; g2                            ;                   ;         ;
+;      - CompareNum:inst|temp~0 ; 0                 ; 0       ;
+; u2                            ;                   ;         ;
+;      - CompareNum:inst|temp~0 ; 1                 ; 0       ;
+; g3                            ;                   ;         ;
+;      - CompareNum:inst|temp~1 ; 1                 ; 0       ;
+; u3                            ;                   ;         ;
+;      - CompareNum:inst|temp~1 ; 0                 ; 0       ;
+; g4                            ;                   ;         ;
+;      - CompareNum:inst|temp~1 ; 0                 ; 0       ;
+; u4                            ;                   ;         ;
+;      - CompareNum:inst|temp~1 ; 1                 ; 0       ;
+; g6                            ;                   ;         ;
+;      - CompareNum:inst|temp~2 ; 0                 ; 0       ;
+; u6                            ;                   ;         ;
+;      - CompareNum:inst|temp~2 ; 1                 ; 0       ;
+; g7                            ;                   ;         ;
+;      - CompareNum:inst|temp~2 ; 1                 ; 0       ;
+; u7                            ;                   ;         ;
+;      - CompareNum:inst|temp~2 ; 1                 ; 0       ;
+; enter                         ;                   ;         ;
++-------------------------------+-------------------+---------+
 
 
-+----------------------------------------------------+
-; Routing Usage Summary                              ;
-+------------------------------+---------------------+
-; Routing Resource Type        ; Usage               ;
-+------------------------------+---------------------+
-; Block interconnects          ; 0 / 374,484 ( 0 % ) ;
-; C12 interconnects            ; 0 / 16,664 ( 0 % )  ;
-; C2 interconnects             ; 0 / 155,012 ( 0 % ) ;
-; C4 interconnects             ; 0 / 72,600 ( 0 % )  ;
-; DQS bus muxes                ; 0 / 30 ( 0 % )      ;
-; DQS-18 I/O buses             ; 0 / 30 ( 0 % )      ;
-; DQS-9 I/O buses              ; 0 / 30 ( 0 % )      ;
-; Direct links                 ; 0 / 374,484 ( 0 % ) ;
-; Global clocks                ; 0 / 16 ( 0 % )      ;
-; Horizontal periphery clocks  ; 0 / 72 ( 0 % )      ;
-; Local interconnects          ; 0 / 112,960 ( 0 % ) ;
-; Quadrant clocks              ; 0 / 88 ( 0 % )      ;
-; R14 interconnects            ; 0 / 15,868 ( 0 % )  ;
-; R14/C12 interconnect drivers ; 0 / 27,256 ( 0 % )  ;
-; R3 interconnects             ; 0 / 169,296 ( 0 % ) ;
-; R6 interconnects             ; 0 / 330,800 ( 0 % ) ;
-; Spine clocks                 ; 0 / 480 ( 0 % )     ;
-; Wire stub REs                ; 0 / 20,834 ( 0 % )  ;
-+------------------------------+---------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                   ;
++-------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Usage ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+; enter ; PIN_M16  ; 2       ; Clock ; yes    ; Global Clock         ; GCLK10           ; --                        ;
++-------+----------+---------+-------+--------+----------------------+------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                      ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; Name  ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+; enter ; PIN_M16  ; 2       ; Global Clock         ; GCLK10           ; --                        ;
++-------+----------+---------+----------------------+------------------+---------------------------+
+
+
++--------------------------------------+
+; Non-Global High Fan-Out Signals      ;
++----------------------------+---------+
+; Name                       ; Fan-Out ;
++----------------------------+---------+
+; CompareNum:inst|temp       ; 2       ;
+; u7~input                   ; 1       ;
+; g7~input                   ; 1       ;
+; u6~input                   ; 1       ;
+; g6~input                   ; 1       ;
+; u4~input                   ; 1       ;
+; g4~input                   ; 1       ;
+; u3~input                   ; 1       ;
+; g3~input                   ; 1       ;
+; u2~input                   ; 1       ;
+; g2~input                   ; 1       ;
+; u1~input                   ; 1       ;
+; g1~input                   ; 1       ;
+; u0~input                   ; 1       ;
+; g0~input                   ; 1       ;
+; u5~input                   ; 1       ;
+; g5~input                   ; 1       ;
+; CompareNum:inst|temp2[1]~0 ; 1       ;
+; CompareNum:inst|temp~2     ; 1       ;
+; CompareNum:inst|temp~1     ; 1       ;
+; CompareNum:inst|temp~0     ; 1       ;
+; CompareNum:inst|temp2[1]   ; 1       ;
+; CompareNum:inst|temp2[0]   ; 1       ;
++----------------------------+---------+
+
+
++-------------------------------------------------------+
+; Routing Usage Summary                                 ;
++------------------------------+------------------------+
+; Routing Resource Type        ; Usage                  ;
++------------------------------+------------------------+
+; Block interconnects          ; 19 / 374,484 ( < 1 % ) ;
+; C12 interconnects            ; 0 / 16,664 ( 0 % )     ;
+; C2 interconnects             ; 15 / 155,012 ( < 1 % ) ;
+; C4 interconnects             ; 3 / 72,600 ( < 1 % )   ;
+; DQS bus muxes                ; 0 / 30 ( 0 % )         ;
+; DQS-18 I/O buses             ; 0 / 30 ( 0 % )         ;
+; DQS-9 I/O buses              ; 0 / 30 ( 0 % )         ;
+; Direct links                 ; 1 / 374,484 ( < 1 % )  ;
+; Global clocks                ; 1 / 16 ( 6 % )         ;
+; Horizontal periphery clocks  ; 0 / 72 ( 0 % )         ;
+; Local interconnects          ; 3 / 112,960 ( < 1 % )  ;
+; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
+; R14 interconnects            ; 0 / 15,868 ( 0 % )     ;
+; R14/C12 interconnect drivers ; 0 / 27,256 ( 0 % )     ;
+; R3 interconnects             ; 8 / 169,296 ( < 1 % )  ;
+; R6 interconnects             ; 10 / 330,800 ( < 1 % ) ;
+; Spine clocks                 ; 1 / 480 ( < 1 % )      ;
+; Wire stub REs                ; 0 / 20,834 ( 0 % )     ;
++------------------------------+------------------------+
 
 
 +------------------------------------------+
@@ -1043,21 +1155,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 ; Pin/Rules          ; IO_000001    ; IO_000002    ; IO_000003    ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007    ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000034    ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
-; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 11        ; 0            ; 0            ; 11        ; 11        ; 0            ; 2            ; 0            ; 0            ; 0            ; 0            ; 2            ; 0            ; 0            ; 0            ; 0            ; 2            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; Total Pass         ; 0            ; 0            ; 0            ; 0            ; 0            ; 19        ; 0            ; 0            ; 19        ; 19        ; 0            ; 2            ; 0            ; 0            ; 0            ; 0            ; 2            ; 0            ; 0            ; 0            ; 0            ; 2            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
 ; Total Unchecked    ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; Total Inapplicable ; 11           ; 11           ; 11           ; 11           ; 11           ; 0         ; 11           ; 11           ; 0         ; 0         ; 11           ; 9            ; 11           ; 11           ; 11           ; 11           ; 9            ; 11           ; 11           ; 11           ; 11           ; 9            ; 11           ; 11           ; 11           ; 11           ; 11           ; 11           ;
+; Total Inapplicable ; 19           ; 19           ; 19           ; 19           ; 19           ; 0         ; 19           ; 19           ; 0         ; 0         ; 19           ; 17           ; 19           ; 19           ; 19           ; 19           ; 17           ; 19           ; 19           ; 19           ; 19           ; 17           ; 19           ; 19           ; 19           ; 19           ; 19           ; 19           ;
 ; Total Fail         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
-; TSF1               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; TSF0               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; TFS0               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; TFS1               ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g5                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u5                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g0                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u0                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u1                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u2                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g3                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u3                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g4                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u4                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g6                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u6                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; g7                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
+; u7                 ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 ; enter              ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in7                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in6                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in5                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in4                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in3                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in2                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in1                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
-; in0                ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ;
 +--------------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
 
 
@@ -1113,20 +1233,20 @@ Info (21076): Low junction temperature operating condition is not set. Assuming 
 Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
 Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 11 pins of 11 total pins. For the list of the pins please refer to the Input Pins, Output Pins, and Bidir Pins tables in the Fitter report and look for the user pins whose location is assigned by Fitter.
+Critical Warning (169085): No exact pin location assignment(s) for 19 pins of 19 total pins. For the list of the pins please refer to the Input Pins, Output Pins, and Bidir Pins tables in the Fitter report and look for the user pins whose location is assigned by Fitter.
 Info (184020): Starting Fitter periphery placement operations
+Info (11191): Automatically promoted 1 clock (1 global)
+    Info (11162): enter~inputCLKENA0 with 2 fanout uses global clock CLKCTRL_G10
 Info (184021): Fitter periphery placement operations ending: elapsed time is 00:00:00
 Info (176233): Starting register packing
-Info (176235): Finished register packing
-    Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'projectFull.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
+Info (176235): Finished register packing
+    Extra Info (176219): No registers were packed into other blocks
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:08
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1134,28 +1254,28 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X0_Y23 to location X10_Y34
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X56_Y70 to location X66_Y81
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.05 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.13 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
-Info (144001): Generated suppressed messages file C:/altera/14.0/projectFull/output_files/projectFull.fit.smsg
-Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6314 megabytes
-    Info: Processing ended: Wed May 26 11:48:36 2021
-    Info: Elapsed time: 00:00:36
-    Info: Total CPU time (on all processors): 00:01:00
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (144001): Generated suppressed messages file C:/CircuitFinalProject/logic-circuit-design/projectFull/output_files/projectFull.fit.smsg
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 6361 megabytes
+    Info: Processing ended: Wed May 26 15:34:24 2021
+    Info: Elapsed time: 00:00:33
+    Info: Total CPU time (on all processors): 00:00:54
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/altera/14.0/projectFull/output_files/projectFull.fit.smsg.
+The suppressed messages can be found in C:/CircuitFinalProject/logic-circuit-design/projectFull/output_files/projectFull.fit.smsg.
 
 

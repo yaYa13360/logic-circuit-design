@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for projectFull
-Wed May 26 11:49:00 2021
+Wed May 26 15:34:46 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -17,42 +17,58 @@ Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
   9. Slow 1100mV 85C Model Recovery Summary
  10. Slow 1100mV 85C Model Removal Summary
  11. Slow 1100mV 85C Model Minimum Pulse Width Summary
- 12. Slow 1100mV 85C Model Datasheet Report
- 13. Slow 1100mV 85C Model Metastability Report
- 14. Slow 1100mV 0C Model Fmax Summary
- 15. Slow 1100mV 0C Model Setup Summary
- 16. Slow 1100mV 0C Model Hold Summary
- 17. Slow 1100mV 0C Model Recovery Summary
- 18. Slow 1100mV 0C Model Removal Summary
- 19. Slow 1100mV 0C Model Minimum Pulse Width Summary
- 20. Slow 1100mV 0C Model Datasheet Report
- 21. Slow 1100mV 0C Model Metastability Report
- 22. Fast 1100mV 85C Model Setup Summary
- 23. Fast 1100mV 85C Model Hold Summary
- 24. Fast 1100mV 85C Model Recovery Summary
- 25. Fast 1100mV 85C Model Removal Summary
- 26. Fast 1100mV 85C Model Minimum Pulse Width Summary
- 27. Fast 1100mV 85C Model Datasheet Report
- 28. Fast 1100mV 85C Model Metastability Report
- 29. Fast 1100mV 0C Model Setup Summary
- 30. Fast 1100mV 0C Model Hold Summary
- 31. Fast 1100mV 0C Model Recovery Summary
- 32. Fast 1100mV 0C Model Removal Summary
- 33. Fast 1100mV 0C Model Minimum Pulse Width Summary
- 34. Fast 1100mV 0C Model Datasheet Report
- 35. Fast 1100mV 0C Model Metastability Report
- 36. Multicorner Timing Analysis Summary
- 37. Board Trace Model Assignments
- 38. Input Transition Times
- 39. Signal Integrity Metrics (Slow 1100mv 0c Model)
- 40. Signal Integrity Metrics (Slow 1100mv 85c Model)
- 41. Signal Integrity Metrics (Fast 1100mv 0c Model)
- 42. Signal Integrity Metrics (Fast 1100mv 85c Model)
- 43. Clock Transfers
- 44. Report TCCS
- 45. Report RSKM
- 46. Unconstrained Paths
- 47. TimeQuest Timing Analyzer Messages
+ 12. Setup Times
+ 13. Hold Times
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Slow 1100mV 85C Model Metastability Report
+ 17. Slow 1100mV 0C Model Fmax Summary
+ 18. Slow 1100mV 0C Model Setup Summary
+ 19. Slow 1100mV 0C Model Hold Summary
+ 20. Slow 1100mV 0C Model Recovery Summary
+ 21. Slow 1100mV 0C Model Removal Summary
+ 22. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 23. Setup Times
+ 24. Hold Times
+ 25. Clock to Output Times
+ 26. Minimum Clock to Output Times
+ 27. Slow 1100mV 0C Model Metastability Report
+ 28. Fast 1100mV 85C Model Setup Summary
+ 29. Fast 1100mV 85C Model Hold Summary
+ 30. Fast 1100mV 85C Model Recovery Summary
+ 31. Fast 1100mV 85C Model Removal Summary
+ 32. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Fast 1100mV 85C Model Metastability Report
+ 38. Fast 1100mV 0C Model Setup Summary
+ 39. Fast 1100mV 0C Model Hold Summary
+ 40. Fast 1100mV 0C Model Recovery Summary
+ 41. Fast 1100mV 0C Model Removal Summary
+ 42. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 43. Setup Times
+ 44. Hold Times
+ 45. Clock to Output Times
+ 46. Minimum Clock to Output Times
+ 47. Fast 1100mV 0C Model Metastability Report
+ 48. Multicorner Timing Analysis Summary
+ 49. Setup Times
+ 50. Hold Times
+ 51. Clock to Output Times
+ 52. Minimum Clock to Output Times
+ 53. Board Trace Model Assignments
+ 54. Input Transition Times
+ 55. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 56. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 57. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 58. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 59. Clock Transfers
+ 60. Report TCCS
+ 61. Report RSKM
+ 62. Unconstrained Paths
+ 63. TimeQuest Timing Analyzer Messages
 
 
 
@@ -107,10 +123,13 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-----------
-; Clocks ;
-----------
-No clocks to report.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; enter      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { enter } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
 
 
 --------------------------------------
@@ -149,16 +168,81 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------------
++---------------------------------------------------+
 ; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; enter ; -0.724 ; -2.215                           ;
++-------+--------+----------------------------------+
 
 
-------------------------------------------
-; Slow 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; g0        ; enter      ; 1.649 ; 1.655 ; Rise       ; enter           ;
+; g1        ; enter      ; 4.027 ; 3.980 ; Rise       ; enter           ;
+; g2        ; enter      ; 3.658 ; 3.709 ; Rise       ; enter           ;
+; g3        ; enter      ; 4.087 ; 4.203 ; Rise       ; enter           ;
+; g4        ; enter      ; 3.709 ; 3.722 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.738 ; 0.844 ; Rise       ; enter           ;
+; g6        ; enter      ; 4.012 ; 3.979 ; Rise       ; enter           ;
+; g7        ; enter      ; 1.304 ; 1.344 ; Rise       ; enter           ;
+; u0        ; enter      ; 1.587 ; 1.582 ; Rise       ; enter           ;
+; u1        ; enter      ; 1.552 ; 1.625 ; Rise       ; enter           ;
+; u2        ; enter      ; 4.311 ; 4.406 ; Rise       ; enter           ;
+; u3        ; enter      ; 3.659 ; 3.661 ; Rise       ; enter           ;
+; u4        ; enter      ; 1.371 ; 1.425 ; Rise       ; enter           ;
+; u5        ; enter      ; 2.709 ; 2.698 ; Rise       ; enter           ;
+; u6        ; enter      ; 1.320 ; 1.436 ; Rise       ; enter           ;
+; u7        ; enter      ; 1.005 ; 1.012 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; g0        ; enter      ; 0.020  ; 0.004  ; Rise       ; enter           ;
+; g1        ; enter      ; -0.411 ; -0.378 ; Rise       ; enter           ;
+; g2        ; enter      ; -0.104 ; -0.103 ; Rise       ; enter           ;
+; g3        ; enter      ; -0.401 ; -0.459 ; Rise       ; enter           ;
+; g4        ; enter      ; -0.151 ; -0.124 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.692  ; 0.691  ; Rise       ; enter           ;
+; g6        ; enter      ; -0.378 ; -0.339 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.289  ; 0.266  ; Rise       ; enter           ;
+; u0        ; enter      ; 0.093  ; 0.054  ; Rise       ; enter           ;
+; u1        ; enter      ; 0.029  ; -0.001 ; Rise       ; enter           ;
+; u2        ; enter      ; -0.623 ; -0.669 ; Rise       ; enter           ;
+; u3        ; enter      ; -0.058 ; -0.096 ; Rise       ; enter           ;
+; u4        ; enter      ; 0.175  ; 0.165  ; Rise       ; enter           ;
+; u5        ; enter      ; 0.660  ; 0.694  ; Rise       ; enter           ;
+; u6        ; enter      ; 0.280  ; 0.144  ; Rise       ; enter           ;
+; u7        ; enter      ; 0.458  ; 0.471  ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TFS0      ; enter      ; 11.264 ; 11.379 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 10.757 ; 10.792 ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 9.200 ; 9.274 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 8.741 ; 8.772 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 ----------------------------------------------
@@ -197,16 +281,81 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; enter ; -0.724 ; -2.221                          ;
++-------+--------+---------------------------------+
 
 
------------------------------------------
-; Slow 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; g0        ; enter      ; 1.604 ; 1.660 ; Rise       ; enter           ;
+; g1        ; enter      ; 3.955 ; 3.919 ; Rise       ; enter           ;
+; g2        ; enter      ; 3.538 ; 3.633 ; Rise       ; enter           ;
+; g3        ; enter      ; 3.910 ; 4.072 ; Rise       ; enter           ;
+; g4        ; enter      ; 3.540 ; 3.596 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.583 ; 0.748 ; Rise       ; enter           ;
+; g6        ; enter      ; 3.970 ; 3.980 ; Rise       ; enter           ;
+; g7        ; enter      ; 1.220 ; 1.317 ; Rise       ; enter           ;
+; u0        ; enter      ; 1.544 ; 1.603 ; Rise       ; enter           ;
+; u1        ; enter      ; 1.521 ; 1.624 ; Rise       ; enter           ;
+; u2        ; enter      ; 4.288 ; 4.405 ; Rise       ; enter           ;
+; u3        ; enter      ; 3.475 ; 3.483 ; Rise       ; enter           ;
+; u4        ; enter      ; 1.250 ; 1.337 ; Rise       ; enter           ;
+; u5        ; enter      ; 2.525 ; 2.567 ; Rise       ; enter           ;
+; u6        ; enter      ; 1.219 ; 1.279 ; Rise       ; enter           ;
+; u7        ; enter      ; 0.856 ; 0.919 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; g0        ; enter      ; 0.064  ; 0.053  ; Rise       ; enter           ;
+; g1        ; enter      ; -0.370 ; -0.341 ; Rise       ; enter           ;
+; g2        ; enter      ; -0.001 ; -0.035 ; Rise       ; enter           ;
+; g3        ; enter      ; -0.261 ; -0.363 ; Rise       ; enter           ;
+; g4        ; enter      ; 0.002  ; 0.004  ; Rise       ; enter           ;
+; g5        ; enter      ; 0.814  ; 0.763  ; Rise       ; enter           ;
+; g6        ; enter      ; -0.338 ; -0.339 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.360  ; 0.284  ; Rise       ; enter           ;
+; u0        ; enter      ; 0.130  ; 0.133  ; Rise       ; enter           ;
+; u1        ; enter      ; 0.050  ; -0.005 ; Rise       ; enter           ;
+; u2        ; enter      ; -0.599 ; -0.666 ; Rise       ; enter           ;
+; u3        ; enter      ; 0.069  ; 0.071  ; Rise       ; enter           ;
+; u4        ; enter      ; 0.293  ; 0.258  ; Rise       ; enter           ;
+; u5        ; enter      ; 0.811  ; 0.799  ; Rise       ; enter           ;
+; u6        ; enter      ; 0.359  ; 0.248  ; Rise       ; enter           ;
+; u7        ; enter      ; 0.575  ; 0.544  ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TFS0      ; enter      ; 11.145 ; 11.291 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 10.686 ; 10.720 ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 9.110 ; 9.226 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 8.700 ; 8.735 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 ---------------------------------------------
@@ -239,16 +388,81 @@ No paths to report.
 No paths to report.
 
 
------------------------------------------------------
++---------------------------------------------------+
 ; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
------------------------------------------------------
-No paths to report.
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; enter ; -0.080 ; -0.159                           ;
++-------+--------+----------------------------------+
 
 
-------------------------------------------
-; Fast 1100mV 85C Model Datasheet Report ;
-------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; g0        ; enter      ; 0.532 ; 0.965 ; Rise       ; enter           ;
+; g1        ; enter      ; 1.446 ; 1.902 ; Rise       ; enter           ;
+; g2        ; enter      ; 1.358 ; 1.819 ; Rise       ; enter           ;
+; g3        ; enter      ; 1.508 ; 2.013 ; Rise       ; enter           ;
+; g4        ; enter      ; 1.379 ; 1.842 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.222 ; 0.739 ; Rise       ; enter           ;
+; g6        ; enter      ; 1.385 ; 1.809 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.369 ; 0.831 ; Rise       ; enter           ;
+; u0        ; enter      ; 0.493 ; 0.941 ; Rise       ; enter           ;
+; u1        ; enter      ; 0.456 ; 0.927 ; Rise       ; enter           ;
+; u2        ; enter      ; 1.588 ; 2.087 ; Rise       ; enter           ;
+; u3        ; enter      ; 1.299 ; 1.700 ; Rise       ; enter           ;
+; u4        ; enter      ; 0.437 ; 0.900 ; Rise       ; enter           ;
+; u5        ; enter      ; 1.005 ; 1.434 ; Rise       ; enter           ;
+; u6        ; enter      ; 0.424 ; 0.891 ; Rise       ; enter           ;
+; u7        ; enter      ; 0.318 ; 0.768 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; g0        ; enter      ; 0.073  ; -0.345 ; Rise       ; enter           ;
+; g1        ; enter      ; -0.075 ; -0.508 ; Rise       ; enter           ;
+; g2        ; enter      ; 0.007  ; -0.427 ; Rise       ; enter           ;
+; g3        ; enter      ; -0.114 ; -0.581 ; Rise       ; enter           ;
+; g4        ; enter      ; -0.021 ; -0.454 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.332  ; -0.129 ; Rise       ; enter           ;
+; g6        ; enter      ; -0.021 ; -0.429 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.205  ; -0.234 ; Rise       ; enter           ;
+; u0        ; enter      ; 0.114  ; -0.308 ; Rise       ; enter           ;
+; u1        ; enter      ; 0.120  ; -0.325 ; Rise       ; enter           ;
+; u2        ; enter      ; -0.195 ; -0.657 ; Rise       ; enter           ;
+; u3        ; enter      ; 0.065  ; -0.348 ; Rise       ; enter           ;
+; u4        ; enter      ; 0.131  ; -0.306 ; Rise       ; enter           ;
+; u5        ; enter      ; 0.288  ; -0.123 ; Rise       ; enter           ;
+; u6        ; enter      ; 0.161  ; -0.293 ; Rise       ; enter           ;
+; u7        ; enter      ; 0.226  ; -0.202 ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 5.029 ; 5.228 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 4.802 ; 4.930 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 4.277 ; 4.449 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 4.072 ; 4.197 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 ----------------------------------------------
@@ -281,16 +495,81 @@ No paths to report.
 No paths to report.
 
 
-----------------------------------------------------
++--------------------------------------------------+
 ; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-----------------------------------------------------
-No paths to report.
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; enter ; -0.082 ; -0.164                          ;
++-------+--------+---------------------------------+
 
 
------------------------------------------
-; Fast 1100mV 0C Model Datasheet Report ;
------------------------------------------
-Nothing to report.
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; g0        ; enter      ; 0.504 ; 0.947 ; Rise       ; enter           ;
+; g1        ; enter      ; 1.410 ; 1.865 ; Rise       ; enter           ;
+; g2        ; enter      ; 1.342 ; 1.806 ; Rise       ; enter           ;
+; g3        ; enter      ; 1.476 ; 1.974 ; Rise       ; enter           ;
+; g4        ; enter      ; 1.333 ; 1.797 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.209 ; 0.720 ; Rise       ; enter           ;
+; g6        ; enter      ; 1.357 ; 1.790 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.336 ; 0.802 ; Rise       ; enter           ;
+; u0        ; enter      ; 0.460 ; 0.918 ; Rise       ; enter           ;
+; u1        ; enter      ; 0.443 ; 0.913 ; Rise       ; enter           ;
+; u2        ; enter      ; 1.568 ; 2.050 ; Rise       ; enter           ;
+; u3        ; enter      ; 1.276 ; 1.684 ; Rise       ; enter           ;
+; u4        ; enter      ; 0.387 ; 0.847 ; Rise       ; enter           ;
+; u5        ; enter      ; 1.002 ; 1.439 ; Rise       ; enter           ;
+; u6        ; enter      ; 0.404 ; 0.866 ; Rise       ; enter           ;
+; u7        ; enter      ; 0.307 ; 0.766 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; g0        ; enter      ; 0.073  ; -0.348 ; Rise       ; enter           ;
+; g1        ; enter      ; -0.070 ; -0.500 ; Rise       ; enter           ;
+; g2        ; enter      ; -0.003 ; -0.442 ; Rise       ; enter           ;
+; g3        ; enter      ; -0.109 ; -0.575 ; Rise       ; enter           ;
+; g4        ; enter      ; -0.004 ; -0.440 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.316  ; -0.148 ; Rise       ; enter           ;
+; g6        ; enter      ; -0.016 ; -0.436 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.214  ; -0.237 ; Rise       ; enter           ;
+; u0        ; enter      ; 0.118  ; -0.305 ; Rise       ; enter           ;
+; u1        ; enter      ; 0.109  ; -0.336 ; Rise       ; enter           ;
+; u2        ; enter      ; -0.199 ; -0.652 ; Rise       ; enter           ;
+; u3        ; enter      ; 0.061  ; -0.358 ; Rise       ; enter           ;
+; u4        ; enter      ; 0.152  ; -0.286 ; Rise       ; enter           ;
+; u5        ; enter      ; 0.267  ; -0.158 ; Rise       ; enter           ;
+; u6        ; enter      ; 0.152  ; -0.303 ; Rise       ; enter           ;
+; u7        ; enter      ; 0.213  ; -0.227 ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 4.791 ; 4.934 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 4.568 ; 4.673 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 4.048 ; 4.174 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 3.845 ; 3.947 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 ---------------------------------------------
@@ -304,9 +583,79 @@ No synchronizer chains to report.
 +------------------+-------+------+----------+---------+---------------------+
 ; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+-------+------+----------+---------+---------------------+
-; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
-; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; -0.724              ;
+;  enter           ; N/A   ; N/A  ; N/A      ; N/A     ; -0.724              ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -2.221              ;
+;  enter           ; N/A   ; N/A  ; N/A      ; N/A     ; -2.221              ;
 +------------------+-------+------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; g0        ; enter      ; 1.649 ; 1.660 ; Rise       ; enter           ;
+; g1        ; enter      ; 4.027 ; 3.980 ; Rise       ; enter           ;
+; g2        ; enter      ; 3.658 ; 3.709 ; Rise       ; enter           ;
+; g3        ; enter      ; 4.087 ; 4.203 ; Rise       ; enter           ;
+; g4        ; enter      ; 3.709 ; 3.722 ; Rise       ; enter           ;
+; g5        ; enter      ; 0.738 ; 0.844 ; Rise       ; enter           ;
+; g6        ; enter      ; 4.012 ; 3.980 ; Rise       ; enter           ;
+; g7        ; enter      ; 1.304 ; 1.344 ; Rise       ; enter           ;
+; u0        ; enter      ; 1.587 ; 1.603 ; Rise       ; enter           ;
+; u1        ; enter      ; 1.552 ; 1.625 ; Rise       ; enter           ;
+; u2        ; enter      ; 4.311 ; 4.406 ; Rise       ; enter           ;
+; u3        ; enter      ; 3.659 ; 3.661 ; Rise       ; enter           ;
+; u4        ; enter      ; 1.371 ; 1.425 ; Rise       ; enter           ;
+; u5        ; enter      ; 2.709 ; 2.698 ; Rise       ; enter           ;
+; u6        ; enter      ; 1.320 ; 1.436 ; Rise       ; enter           ;
+; u7        ; enter      ; 1.005 ; 1.012 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; g0        ; enter      ; 0.073  ; 0.053  ; Rise       ; enter           ;
+; g1        ; enter      ; -0.070 ; -0.341 ; Rise       ; enter           ;
+; g2        ; enter      ; 0.007  ; -0.035 ; Rise       ; enter           ;
+; g3        ; enter      ; -0.109 ; -0.363 ; Rise       ; enter           ;
+; g4        ; enter      ; 0.002  ; 0.004  ; Rise       ; enter           ;
+; g5        ; enter      ; 0.814  ; 0.763  ; Rise       ; enter           ;
+; g6        ; enter      ; -0.016 ; -0.339 ; Rise       ; enter           ;
+; g7        ; enter      ; 0.360  ; 0.284  ; Rise       ; enter           ;
+; u0        ; enter      ; 0.130  ; 0.133  ; Rise       ; enter           ;
+; u1        ; enter      ; 0.120  ; -0.001 ; Rise       ; enter           ;
+; u2        ; enter      ; -0.195 ; -0.652 ; Rise       ; enter           ;
+; u3        ; enter      ; 0.069  ; 0.071  ; Rise       ; enter           ;
+; u4        ; enter      ; 0.293  ; 0.258  ; Rise       ; enter           ;
+; u5        ; enter      ; 0.811  ; 0.799  ; Rise       ; enter           ;
+; u6        ; enter      ; 0.359  ; 0.248  ; Rise       ; enter           ;
+; u7        ; enter      ; 0.575  ; 0.544  ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; TFS0      ; enter      ; 11.264 ; 11.379 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 10.757 ; 10.792 ; Rise       ; enter           ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; TFS0      ; enter      ; 4.048 ; 4.174 ; Rise       ; enter           ;
+; TFS1      ; enter      ; 3.845 ; 3.947 ; Rise       ; enter           ;
++-----------+------------+-------+-------+------------+-----------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -314,8 +663,8 @@ No synchronizer chains to report.
 +------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 ; Pin  ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
 +------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
-; TSF1 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; TSF0 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; TFS0 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; TFS1 ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
 
@@ -324,15 +673,23 @@ No synchronizer chains to report.
 +-------+--------------+-----------------+-----------------+
 ; Pin   ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
 +-------+--------------+-----------------+-----------------+
+; g5    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u5    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g0    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u0    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g1    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u1    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g2    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u2    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g3    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u3    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g4    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u4    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g6    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u6    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; g7    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; u7    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 ; enter ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in7   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in6   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in5   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in4   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in3   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in2   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in1   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
-; in0   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
 +-------+--------------+-----------------+-----------------+
 
 
@@ -341,8 +698,8 @@ No synchronizer chains to report.
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin  ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; TSF1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.86e-08 V                   ; 2.4 V               ; -0.0326 V           ; 0.227 V                              ; 0.16 V                               ; 4.73e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 6.86e-08 V                  ; 2.4 V              ; -0.0326 V          ; 0.227 V                             ; 0.16 V                              ; 4.73e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
-; TSF0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.86e-08 V                   ; 2.4 V               ; -0.0326 V           ; 0.227 V                              ; 0.16 V                               ; 4.73e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 6.86e-08 V                  ; 2.4 V              ; -0.0326 V          ; 0.227 V                             ; 0.16 V                              ; 4.73e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
+; TFS0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.72e-08 V                   ; 2.4 V               ; -0.0409 V           ; 0.192 V                              ; 0.125 V                              ; 4.59e-10 s                  ; 4.54e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 6.72e-08 V                  ; 2.4 V              ; -0.0409 V          ; 0.192 V                             ; 0.125 V                             ; 4.59e-10 s                 ; 4.54e-10 s                 ; No                        ; Yes                       ;
+; TFS1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.86e-08 V                   ; 2.4 V               ; -0.0326 V           ; 0.227 V                              ; 0.16 V                               ; 4.73e-10 s                  ; 4.78e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 6.86e-08 V                  ; 2.4 V              ; -0.0326 V          ; 0.227 V                             ; 0.16 V                              ; 4.73e-10 s                 ; 4.78e-10 s                 ; No                        ; Yes                       ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -351,8 +708,8 @@ No synchronizer chains to report.
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin  ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; TSF1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.05e-05 V                   ; 2.37 V              ; -0.0225 V           ; 0.277 V                              ; 0.104 V                              ; 5.22e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.05e-05 V                  ; 2.37 V             ; -0.0225 V          ; 0.277 V                             ; 0.104 V                             ; 5.22e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
-; TSF0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.05e-05 V                   ; 2.37 V              ; -0.0225 V           ; 0.277 V                              ; 0.104 V                              ; 5.22e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.05e-05 V                  ; 2.37 V             ; -0.0225 V          ; 0.277 V                             ; 0.104 V                             ; 5.22e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
+; TFS0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.04e-05 V                   ; 2.38 V              ; -0.027 V            ; 0.226 V                              ; 0.08 V                               ; 4.84e-10 s                  ; 5.18e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.04e-05 V                  ; 2.38 V             ; -0.027 V           ; 0.226 V                             ; 0.08 V                              ; 4.84e-10 s                 ; 5.18e-10 s                 ; No                        ; Yes                       ;
+; TFS1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.05e-05 V                   ; 2.37 V              ; -0.0225 V           ; 0.277 V                              ; 0.104 V                              ; 5.22e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.05e-05 V                  ; 2.37 V             ; -0.0225 V          ; 0.277 V                             ; 0.104 V                             ; 5.22e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -361,8 +718,8 @@ No synchronizer chains to report.
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin  ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; TSF1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
-; TSF0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; TFS0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.14e-06 V                   ; 2.91 V              ; -0.121 V            ; 0.326 V                              ; 0.297 V                              ; 2.74e-10 s                  ; 2.8e-10 s                   ; No                         ; No                         ; 2.75 V                      ; 4.14e-06 V                  ; 2.91 V             ; -0.121 V           ; 0.326 V                             ; 0.297 V                             ; 2.74e-10 s                 ; 2.8e-10 s                  ; No                        ; No                        ;
+; TFS1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -371,8 +728,8 @@ No synchronizer chains to report.
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin  ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; TSF1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
-; TSF0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; TFS0 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000242 V                   ; 2.86 V              ; -0.0814 V           ; 0.36 V                               ; 0.156 V                              ; 3e-10 s                     ; 4.34e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000242 V                  ; 2.86 V             ; -0.0814 V          ; 0.36 V                              ; 0.156 V                             ; 3e-10 s                    ; 4.34e-10 s                 ; No                        ; No                        ;
+; TFS1 ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
 +------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -401,10 +758,10 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 0     ; 0    ;
-; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 32    ; 32   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
 +---------------------------------+-------+------+
 
 
@@ -414,7 +771,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
-    Info: Processing started: Wed May 26 11:48:52 2021
+    Info: Processing started: Wed May 26 15:34:39 2021
 Info: Command: quartus_sta projectFull -c projectFull
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
@@ -422,60 +779,70 @@ Info (21076): High junction temperature operating condition is not set. Assuming
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'projectFull.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name enter enter
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
-Info (332159): No clocks to report
 Info: Analyzing Slow 1100mV 85C Model
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -0.724
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.724              -2.215 enter 
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332140): No fmax paths to report
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -0.724
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.724              -2.221 enter 
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -0.080
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.080              -0.159 enter 
 Info: Analyzing Fast 1100mV 0C Model
-Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
-Warning (332068): No clocks defined in design.
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Info (332140): No Setup paths to report
 Info (332140): No Hold paths to report
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
-Info (332140): No Minimum Pulse Width paths to report
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -0.082
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.082              -0.164 enter 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5063 megabytes
-    Info: Processing ended: Wed May 26 11:49:00 2021
-    Info: Elapsed time: 00:00:08
+    Info: Peak virtual memory: 5108 megabytes
+    Info: Processing ended: Wed May 26 15:34:46 2021
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:07
 
 
