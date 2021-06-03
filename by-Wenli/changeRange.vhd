@@ -4,25 +4,27 @@ use ieee.std_logic_unsigned.all;
 use ieee.numeric_std.ALL;
 entity changeRange is 
 port(
-	clk            : in  std_logic;
 	input_tens     : in  std_logic_vector(3 downto 0);
 	input_digits   : in  std_logic_vector(3 downto 0);
 	preset_tens    : in  std_logic_vector(3 downto 0);
 	preset_digits  : in  std_logic_vector(3 downto 0);
-	--min_tens       : in  std_logic_vector(3 downto 0);
-	--min_digits     : in  std_logic_vector(3 downto 0);
-	--max_tens       : in  std_logic_vector(3 downto 0);
-	--max_digits     : in  std_logic_vector(3 downto 0);
-	--out_tens       : out std_logic_vector(3 downto 0);
-	--out_digits     : out std_logic_vector(3 downto 0);
-	DE_tens        : out std_logic_vector(2 downto 0);
-	DE_digits      : out std_logic_vector(2 downto 0);
-	output_tens    : out std_logic_vector(3 downto 0);
-	output_digits  : out std_logic_vector(3 downto 0)
+	min_tens       : in  std_logic_vector(3 downto 0);
+	min_digits     : in  std_logic_vector(3 downto 0);
+	max_tens       : in  std_logic_vector(3 downto 0);
+	max_digits     : in  std_logic_vector(3 downto 0);
+	--out_tens     : out std_logic_vector(3 downto 0);
+	--out_digits   : out std_logic_vector(3 downto 0);
+	--DE_tens      : out std_logic_vector(2 downto 0);
+	--DE_digits    : out std_logic_vector(2 downto 0);
+	op_max_tens   	: out std_logic_vector(3 downto 0);
+	op_max_digits  : out std_logic_vector(3 downto 0);
+	op_min_tens		: out std_logic_vector(3 downto 0);
+	op_min_digits	: out std_logic_vector(3 downto 0)
 	);
 end changeRange;
 
 architecture statetransformertest of changeRange is
+signal clk									 : std_logic;
 signal min_xa , min_ya , min_za      : std_logic;
 signal min_xb , min_yb , min_zb      : std_logic;
 signal max_xa , max_ya , max_za      : std_logic;
@@ -34,10 +36,86 @@ signal min_x  , min_y  , min_z       : std_logic;
 signal max_x  , max_y  , max_z       : std_logic;
 signal temp_tens   : std_logic_vector(3 downto 0);
 signal temp_digits : std_logic_vector(3 downto 0);
+signal tp_max_tens : std_logic_vector(3 downto 0);
+signal tp_max_dg	 : std_logic_vector(3 downto 0);
+signal tp_min_tens : std_logic_vector(3 downto 0);
+signal tp_min_dg   : std_logic_vector(3 downto 0);
 begin	
- 	process(clk)
-	begin
+	process(clk)
+		begin
+		
+		tp_max_tens <= max_tens;
+		tp_max_dg   <= max_digits;
+		tp_min_dg   <= min_digits;
+		tp_min_tens <= min_tens;
+		
+		--判斷輸入值是否小於最小值
+		if(input_tens < tp_min_tens) then
+			min_xa <= '1';
+			min_ya <= '0';
+			min_za <= '0';
+		elsif(input_tens = tp_min_tens) then
+			min_xa <= '0';
+			min_ya <= '1';
+			min_za <= '0';
+		elsif(input_tens > tp_min_tens) then
+			min_xa <= '0';
+			min_ya <= '0';
+			min_za <= '1';
+		end if;
+					
+		if(input_digits < tp_min_dg) then 
+			min_xb <= '1';
+			min_yb <= '0';
+			min_zb <= '0';
+		elsif(input_digits = tp_min_dg) then
+			min_xb <= '0';
+			min_yb <= '1';
+			min_zb <= '0';
+		elsif(input_digits > tp_min_dg) then
+			min_xb <= '0';
+			min_yb <= '0';
+			min_zb <= '1';
+		end if;
+		
+		min_x <= min_xa or (min_ya and min_xb);
+		min_y <= min_ya and min_yb;
+		min_z <= min_za or (min_ya and min_zb);
+		
+		--判斷輸入值是否大於最大值
+		if(input_tens < tp_max_tens) then
+			max_xa <= '1';
+			max_ya <= '0';
+			max_za <= '0';
+		elsif(input_tens = tp_max_tens) then
+			max_xa <= '0';
+			max_ya <= '1';
+			max_za <= '0';
+		elsif(input_tens > tp_max_tens) then
+			max_xa <= '0';
+			max_ya <= '0';
+			max_za <= '1';
+		end if;
+				
+		if(input_digits < tp_max_dg) then 
+			max_xb <= '1';
+			max_yb <= '0';
+			max_zb <= '0';
+		elsif(input_digits = tp_max_dg) then
+			max_xb <= '0';
+			max_yb <= '1';
+			max_zb <= '0';
+		elsif(input_digits > tp_max_dg) then
+			max_xb <= '0';
+			max_yb <= '0';
+			max_zb <= '1';
+		end if;
+	
+		max_x <= max_xa or (max_ya and max_xb);
+		max_y <= max_ya and max_yb;
 		max_z <= max_za or (max_ya and max_zb);
+		
+	
 		--判斷輸入值跟預設值比大小
 		if(input_tens < preset_tens) then
 			xa <= '1';
@@ -71,7 +149,7 @@ begin
 		y <= ya and yb;
 		z <= za or (ya and zb);
 		
-		if(x = '1') then 
+		if(x = '1' and min_z = '1') then 
 			if (input_digits = "1001") then 
 				temp_digits <= "0000";
 				case input_tens is
@@ -147,15 +225,20 @@ begin
 			else
 				temp_tens <= input_tens;
 			end if;
-			output_tens    <= temp_tens;
-			output_digits  <= temp_digits;
-			--out_tens       <= temp_tens;
-			--out_digits     <= temp_digits;
-			DE_tens        <= "000";
-			DE_digits      <= "001";
+			op_min_tens    <= temp_tens;
+			op_min_digits  <= temp_digits;
+			op_max_digits  <= tp_max_dg;
+			op_max_tens    <= tp_max_tens;
 		end if;
 
-		if(z = '1') then 
+		if(x = '1' and min_x = '1') then
+			op_min_tens   <= tp_min_tens;
+			op_min_digits <= tp_min_dg;
+			op_max_tens   <= tp_max_tens;
+			op_max_digits <= tp_max_dg;
+		end if;
+		
+		if(z = '1' and max_x = '1') then 
 			if (input_digits = "0000") then 
 				temp_digits <= "1001";
 				case input_tens is
@@ -231,19 +314,17 @@ begin
 			else
 				temp_tens <= input_tens;
 			end if;
-			output_tens    <= temp_tens;
-			output_digits  <= temp_digits;
-			--out_tens       <= temp_tens;
-			--out_digits     <= temp_digits;
-			DE_tens        <= "100";
-			DE_digits      <= "101";
+			op_max_tens    <= temp_tens;
+			op_max_digits  <= temp_digits;
+			op_min_tens    <= tp_min_tens;
+			op_min_digits  <= tp_min_dg;
 		end if;	
 		
-		if(y = '1') then
-			output_tens   <= input_tens;
-			output_digits <= input_digits;
-			DE_tens       <= "010";
-			DE_digits     <= "011";
+		if(z = '1' and max_z = '1') then 
+			op_max_tens    <= tp_max_tens;
+			op_max_digits  <= tp_max_dg;
+			op_min_tens    <= tp_min_tens;
+			op_min_digits  <= tp_min_dg;
 		end if;
-end process;
+	end process;	
 end statetransformertest;
