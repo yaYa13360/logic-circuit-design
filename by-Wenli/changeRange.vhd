@@ -44,10 +44,13 @@ begin
 	process(clk)
 		begin
 		
-		tp_max_tens <= max_tens;
-		tp_max_dg   <= max_digits;
-		tp_min_dg   <= min_digits;
+		if(max_tens = "0000" and max_digits = "0000") then
+			tp_max_tens <= "1001";
+			tp_max_dg   <= "1001";
+		end if;
+		
 		tp_min_tens <= min_tens;
+		tp_min_dg   <= min_digits;
 		
 		--判斷輸入值是否小於最小值
 		if(input_tens < tp_min_tens) then
@@ -326,5 +329,12 @@ begin
 			op_min_tens    <= tp_min_tens;
 			op_min_digits  <= tp_min_dg;
 		end if;
+		
+		if(y = '1') then
+			op_max_tens   <= tp_max_tens;
+			op_max_digits <= tp_max_dg;
+			op_min_tens   <= tp_min_tens;
+			op_min_digits <= tp_min_dg;
+		end if;	
 	end process;	
 end statetransformertest;
