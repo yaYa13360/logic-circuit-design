@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\altera\14.0\projectFull\simulation\qsim
 vprojectFull
-Z1 !s100 Wz9OzY;LYn4AzE9]ElBP73
-Z2 IC@:>I5R732BeB9m66Pchc1
-Z3 VFKbm9L<6[>HX@MMWS:5ZP0
-Z4 dC:\CircuitFinalProject\logic-circuit-design\projectFull\simulation\qsim
-Z5 w1623502106
-Z6 8projectFull.vo
-Z7 FprojectFull.vo
+Z1 I5Ui`;m_FUozDE^zUBWcaj2
+Z2 VOBVPm4@V65deGP_CfAAKC0
+Z3 dC:\CircuitFinalProject\logic-circuit-design\projectFull\simulation\qsim
+Z4 w1623508759
+Z5 8projectFull.vo
+Z6 FprojectFull.vo
 L0 32
-Z8 OV;L;10.1e;51
+Z7 OV;L;10.1e;51
 r1
 31
-Z9 !s90 -work|work|projectFull.vo|
-Z10 o-work work -O0
-Z11 nproject@full
+Z8 !s90 -work|work|projectFull.vo|
+Z9 o-work work -O0
+Z10 nproject@full
 !i10b 1
+Z11 !s100 nRbJCm2jB91i1b<`S<?>W0
 !s85 0
-Z12 !s108 1623502107.260000
+Z12 !s108 1623508761.447000
 Z13 !s107 projectFull.vo|
 !s101 -O0
 vprojectFull_vlg_check_tst
 !i10b 1
-Z14 !s100 8i:ITWRXR@Q?fAFS=AW`F3
-Z15 IH6cT4jb[IzC[^a_[j`IzT3
-Z16 V2@h?3eZ^bF2QbWiIm@<jX3
-R4
-Z17 w1623502103
-Z18 8Waveform1.vwf.vt
-Z19 FWaveform1.vwf.vt
-Z20 L0 126
-R8
+!s100 `?SVD<F1JW?eMn]>S^2VX3
+IKV8VFl7@4Kl[QSDLA;SU<2
+V3Qj>gD[z8SIOG6h2J:U5^0
+R3
+Z14 w1623508756
+Z15 8Waveform1.vwf.vt
+Z16 FWaveform1.vwf.vt
+Z17 L0 126
+R7
 r1
 !s85 0
 31
-Z21 !s108 1623502107.354000
-Z22 !s107 Waveform1.vwf.vt|
-Z23 !s90 -work|work|Waveform1.vwf.vt|
+Z18 !s108 1623508761.588000
+Z19 !s107 Waveform1.vwf.vt|
+Z20 !s90 -work|work|Waveform1.vwf.vt|
 !s101 -O0
-R10
-Z24 nproject@full_vlg_check_tst
+R9
+Z21 nproject@full_vlg_check_tst
 vprojectFull_vlg_sample_tst
 !i10b 1
-Z25 !s100 5ki0eRdMj_Y7LJD0k;PQ_1
-Z26 I73nfiCkF0NzY97];LKdCm2
-Z27 V<b<1IPARai4C9JHEnKa:n2
-R4
-R17
-R18
-R19
+Z22 !s100 5ki0eRdMj_Y7LJD0k;PQ_1
+Z23 I73nfiCkF0NzY97];LKdCm2
+Z24 V<b<1IPARai4C9JHEnKa:n2
+R3
+R14
+R15
+R16
 L0 30
-R8
+R7
 r1
 !s85 0
 31
-R21
-R22
-R23
+R18
+R19
+R20
 !s101 -O0
-R10
-Z28 nproject@full_vlg_sample_tst
+R9
+Z25 nproject@full_vlg_sample_tst
 vprojectFull_vlg_vec_tst
 !i10b 1
-!s100 R1SCNj1]6H9In`KH:kL8g3
-IJ9V@K_52HWZWYKlBL@h[_2
-Z29 VTI1kaj]kE>CKXkz5JEY]S0
-R4
-R17
-R18
-R19
-Z30 L0 815
-R8
+!s100 l:==4bM`iNG]NH?[ho>B<0
+I1Y9Sc>9MIPi]HkQ4Dg6;[0
+Z26 VTI1kaj]kE>CKXkz5JEY]S0
+R3
+R14
+R15
+R16
+L0 788
+R7
 r1
 !s85 0
 31
-R21
-R22
-R23
+R18
+R19
+R20
 !s101 -O0
-R10
-Z31 nproject@full_vlg_vec_tst
+R9
+Z27 nproject@full_vlg_vec_tst

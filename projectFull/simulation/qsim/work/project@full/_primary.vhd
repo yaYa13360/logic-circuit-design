@@ -2,7 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity projectFull is
     port(
-        TFS1            : out    vl_logic;
+        L1              : out    vl_logic;
         enter           : in     vl_logic;
         restart         : in     vl_logic;
         g0              : in     vl_logic;
@@ -21,7 +21,6 @@ entity projectFull is
         u5              : in     vl_logic;
         u6              : in     vl_logic;
         u7              : in     vl_logic;
-        L1              : out    vl_logic;
         start           : in     vl_logic;
         L3              : out    vl_logic;
         L4              : out    vl_logic;
@@ -58,7 +57,7 @@ entity projectFull is
         id2             : out    vl_logic;
         id1             : out    vl_logic;
         id0             : out    vl_logic;
-        TEST            : out    vl_logic;
+        TFS1            : out    vl_logic;
         mit2            : in     vl_logic
     );
 end projectFull;

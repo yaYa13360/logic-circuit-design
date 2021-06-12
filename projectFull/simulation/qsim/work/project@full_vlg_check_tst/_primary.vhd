@@ -23,7 +23,6 @@ entity projectFull_vlg_check_tst is
         mt1             : in     vl_logic;
         mt2             : in     vl_logic;
         mt3             : in     vl_logic;
-        TEST            : in     vl_logic;
         TFS1            : in     vl_logic;
         sampler_rx      : in     vl_logic
     );

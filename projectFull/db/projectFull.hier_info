@@ -1,7 +1,7 @@
 |projectFull
-TFS1 <= CompareNum:instaa.TFS1
+L1 <= led[0].DB_MAX_OUTPUT_PORT_TYPE
 enter => CompareNum:instaa.enter
-restart => CompareNum:instaa.reset
+enter => CompareNum:instaa.reset
 g0 => CompareNum:instaa.g[0]
 g0 => inst.IN0
 g1 => CompareNum:instaa.g[1]
@@ -34,28 +34,11 @@ u6 => CompareNum:instaa.u[6]
 u6 => inst33.IN0
 u7 => CompareNum:instaa.u[7]
 u7 => inst39.IN0
-L1 <= led[0].DB_MAX_OUTPUT_PORT_TYPE
 start => countLife:inst8.start
 L3 <= led[2].DB_MAX_OUTPUT_PORT_TYPE
 L4 <= led[3].DB_MAX_OUTPUT_PORT_TYPE
-gamest <= countLife:inst8.gameStatus
 L2 <= led[1].DB_MAX_OUTPUT_PORT_TYPE
 mt3 <= op_max_tens[3].DB_MAX_OUTPUT_PORT_TYPE
-mad3 => changeRange:instgg.max_digits[3]
-mad2 => changeRange:instgg.max_digits[2]
-mad1 => changeRange:instgg.max_digits[1]
-mad0 => changeRange:instgg.max_digits[0]
-mat3 => changeRange:instgg.max_tens[3]
-mat2 => changeRange:instgg.max_tens[2]
-mat1 => changeRange:instgg.max_tens[1]
-mat0 => changeRange:instgg.max_tens[0]
-mid3 => changeRange:instgg.min_digits[3]
-mid2 => changeRange:instgg.min_digits[2]
-mid1 => changeRange:instgg.min_digits[1]
-mid0 => changeRange:instgg.min_digits[0]
-mit1 => changeRange:instgg.min_tens[1]
-mit0 => changeRange:instgg.min_tens[0]
-mit3 => changeRange:instgg.min_tens[3]
 mt2 <= op_max_tens[2].DB_MAX_OUTPUT_PORT_TYPE
 mt1 <= op_max_tens[1].DB_MAX_OUTPUT_PORT_TYPE
 mt0 <= op_max_tens[0].DB_MAX_OUTPUT_PORT_TYPE
@@ -71,8 +54,41 @@ id3 <= op_min_digits[3].DB_MAX_OUTPUT_PORT_TYPE
 id2 <= op_min_digits[2].DB_MAX_OUTPUT_PORT_TYPE
 id1 <= op_min_digits[1].DB_MAX_OUTPUT_PORT_TYPE
 id0 <= op_min_digits[0].DB_MAX_OUTPUT_PORT_TYPE
-TEST <= inst40.DB_MAX_OUTPUT_PORT_TYPE
-mit2 => ~NO_FANOUT~
+cols0 <= col_s[0].DB_MAX_OUTPUT_PORT_TYPE
+clk => matrixFace:inst3.clk
+cols1 <= col_s[1].DB_MAX_OUTPUT_PORT_TYPE
+cols2 <= col_s[2].DB_MAX_OUTPUT_PORT_TYPE
+cols3 <= col_s[3].DB_MAX_OUTPUT_PORT_TYPE
+cols4 <= col_s[4].DB_MAX_OUTPUT_PORT_TYPE
+cols5 <= col_s[5].DB_MAX_OUTPUT_PORT_TYPE
+cols6 <= col_s[6].DB_MAX_OUTPUT_PORT_TYPE
+cols7 <= col_s[7].DB_MAX_OUTPUT_PORT_TYPE
+rows0 <= row_s[0].DB_MAX_OUTPUT_PORT_TYPE
+rows1 <= row_s[1].DB_MAX_OUTPUT_PORT_TYPE
+rows2 <= row_s[2].DB_MAX_OUTPUT_PORT_TYPE
+rows3 <= row_s[3].DB_MAX_OUTPUT_PORT_TYPE
+rows4 <= row_s[4].DB_MAX_OUTPUT_PORT_TYPE
+rows5 <= row_s[5].DB_MAX_OUTPUT_PORT_TYPE
+rows6 <= row_s[6].DB_MAX_OUTPUT_PORT_TYPE
+rows7 <= row_s[7].DB_MAX_OUTPUT_PORT_TYPE
+col20 <= matrixFace:inst3.col2[0]
+col21 <= matrixFace:inst3.col2[1]
+col22 <= matrixFace:inst3.col2[2]
+col23 <= matrixFace:inst3.col2[3]
+col25 <= matrixFace:inst3.col2[5]
+col24 <= matrixFace:inst3.col2[4]
+col26 <= matrixFace:inst3.col2[6]
+col27 <= matrixFace:inst3.col2[7]
+
+
+|projectFull|countLife:inst8
+touch => tempTouch.IN0
+start => tempTouch.IN1
+led[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
+led[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
+led[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
+led[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
+gameStatus <= gameStatus.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |projectFull|CompareNum:instaa
@@ -100,17 +116,7 @@ reset => temp2[1].ACLR
 reset => temp2[0].ACLR
 
 
-|projectFull|countLife:inst8
-touch => tempTouch.IN0
-start => tempTouch.IN1
-led[3] <= temp[3].DB_MAX_OUTPUT_PORT_TYPE
-led[2] <= temp[2].DB_MAX_OUTPUT_PORT_TYPE
-led[1] <= temp[1].DB_MAX_OUTPUT_PORT_TYPE
-led[0] <= temp[0].DB_MAX_OUTPUT_PORT_TYPE
-gameStatus <= gameStatus.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|projectFull|changeRange:instgg
+|projectFull|changeRange:inst2
 input_tens[0] => LessThan0.IN4
 input_tens[0] => Equal2.IN3
 input_tens[0] => LessThan1.IN4
@@ -365,5 +371,62 @@ op_min_digits[0] <= op_min_digits[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 op_min_digits[1] <= op_min_digits[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 op_min_digits[2] <= op_min_digits[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 op_min_digits[3] <= op_min_digits[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projectFull|matrixFace:inst3
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => col2[7]~reg0.CLK
+clk => col2[6]~reg0.CLK
+clk => col2[5]~reg0.CLK
+clk => col2[4]~reg0.CLK
+clk => col2[3]~reg0.CLK
+clk => col2[2]~reg0.CLK
+clk => col2[1]~reg0.CLK
+clk => col2[0]~reg0.CLK
+clk => row_s[7]~reg0.CLK
+clk => row_s[6]~reg0.CLK
+clk => row_s[5]~reg0.CLK
+clk => row_s[4]~reg0.CLK
+clk => row_s[3]~reg0.CLK
+clk => row_s[2]~reg0.CLK
+clk => row_s[1]~reg0.CLK
+clk => row_s[0]~reg0.CLK
+clk => col_s[7]~reg0.CLK
+clk => col_s[6]~reg0.CLK
+clk => col_s[5]~reg0.CLK
+clk => col_s[4]~reg0.CLK
+clk => col_s[3]~reg0.CLK
+clk => col_s[2]~reg0.CLK
+clk => col_s[1]~reg0.CLK
+clk => col_s[0]~reg0.CLK
+TFS => col_s.OUTPUTSELECT
+TFS => col_s.OUTPUTSELECT
+gameStatus => ~NO_FANOUT~
+col_s[7] <= col_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[6] <= col_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[5] <= col_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[4] <= col_s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[3] <= col_s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[2] <= col_s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[1] <= col_s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col_s[0] <= col_s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[7] <= row_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[6] <= row_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[5] <= row_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[4] <= row_s[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[3] <= row_s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[2] <= row_s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[1] <= row_s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+row_s[0] <= row_s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[7] <= col2[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[6] <= col2[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[5] <= col2[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[4] <= col2[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[3] <= col2[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[2] <= col2[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[1] <= col2[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+col2[0] <= col2[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
