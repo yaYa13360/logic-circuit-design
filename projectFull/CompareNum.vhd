@@ -6,7 +6,9 @@ port(
 	  enter:in std_logic;
 	  u: in std_logic_vector(0 to 7);
 	  g: in std_logic_vector(0 to 7);
-	  TFS: out std_logic_vector(0 to 1)
+	  TFS0: out std_logic;
+	  TFS1: out std_logic;
+	  reset: in std_logic
 );
 end CompareNum;
 
@@ -16,9 +18,8 @@ signal temp2:std_logic_vector(0 to 1);
 
 begin
 
-process(enter)
-	begin
-	
+process(enter,reset)
+	begin	
 	temp <= (u(0) xor g(0)) or 
 				(u(1) xor g(1)) or
 				(u(2) xor g(2)) or
@@ -28,7 +29,10 @@ process(enter)
 				(u(6) xor g(6)) or
 				(u(7) xor g(7));
 				
-	if enter'event and enter='1' then
+	if reset = '0' then
+	temp2 <= "00";
+				
+	elsif enter'event and enter='1' then
 		case temp is
 			when '0' =>
 				temp2 <= "01";
@@ -36,7 +40,10 @@ process(enter)
 				temp2 <= "10";
 		end case;	
 	end if;
-	
 end process;
-	TFS <= temp2; 
+
+	TFS0 <= temp2(0); 
+	TFS1 <= temp2(1); 
+	
+	
 end a;

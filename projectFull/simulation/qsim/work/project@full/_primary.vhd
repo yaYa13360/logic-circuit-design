@@ -2,8 +2,9 @@ library verilog;
 use verilog.vl_types.all;
 entity projectFull is
     port(
-        TFS0            : out    vl_logic;
+        TFS1            : out    vl_logic;
         enter           : in     vl_logic;
+        restart         : in     vl_logic;
         g0              : in     vl_logic;
         g1              : in     vl_logic;
         g2              : in     vl_logic;
@@ -20,6 +21,44 @@ entity projectFull is
         u5              : in     vl_logic;
         u6              : in     vl_logic;
         u7              : in     vl_logic;
-        TFS1            : out    vl_logic
+        L1              : out    vl_logic;
+        start           : in     vl_logic;
+        L3              : out    vl_logic;
+        L4              : out    vl_logic;
+        gamest          : out    vl_logic;
+        L2              : out    vl_logic;
+        mt3             : out    vl_logic;
+        mad3            : in     vl_logic;
+        mad2            : in     vl_logic;
+        mad1            : in     vl_logic;
+        mad0            : in     vl_logic;
+        mat3            : in     vl_logic;
+        mat2            : in     vl_logic;
+        mat1            : in     vl_logic;
+        mat0            : in     vl_logic;
+        mid3            : in     vl_logic;
+        mid2            : in     vl_logic;
+        mid1            : in     vl_logic;
+        mid0            : in     vl_logic;
+        mit1            : in     vl_logic;
+        mit0            : in     vl_logic;
+        mit3            : in     vl_logic;
+        mt2             : out    vl_logic;
+        mt1             : out    vl_logic;
+        mt0             : out    vl_logic;
+        md3             : out    vl_logic;
+        md2             : out    vl_logic;
+        md1             : out    vl_logic;
+        md0             : out    vl_logic;
+        it3             : out    vl_logic;
+        it2             : out    vl_logic;
+        it1             : out    vl_logic;
+        it0             : out    vl_logic;
+        id3             : out    vl_logic;
+        id2             : out    vl_logic;
+        id1             : out    vl_logic;
+        id0             : out    vl_logic;
+        TEST            : out    vl_logic;
+        mit2            : in     vl_logic
     );
 end projectFull;

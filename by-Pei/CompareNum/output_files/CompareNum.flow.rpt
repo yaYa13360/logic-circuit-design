@@ -1,5 +1,5 @@
 Flow report for CompareNum
-Sat Jun 12 14:39:34 2021
+Sat Jun 12 16:00:30 2021
 Quartus II 64-Bit Version 14.0.0 Build 200 06/17/2014 SJ Web Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +---------------------------------+--------------------------------------------+
-; Flow Status                     ; Successful - Sat Jun 12 14:39:34 2021      ;
+; Flow Status                     ; Successful - Sat Jun 12 16:00:29 2021      ;
 ; Quartus II 64-Bit Version       ; 14.0.0 Build 200 06/17/2014 SJ Web Edition ;
 ; Revision Name                   ; CompareNum                                 ;
 ; Top-level Entity Name           ; CompareNum                                 ;
@@ -68,27 +68,29 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/12/2021 14:31:52 ;
+; Start date & time ; 06/12/2021 15:40:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CompareNum          ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 242944921687221.162347951110372 ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                            ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)          ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; --          ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; --          ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; --          ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                    ;
++-------------------------------------+--------------------------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                                                          ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+--------------------------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 242944921687221.162348360415392                                                ; --            ; --          ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                                                                             ; --            ; --          ; eda_simulation ;
+; EDA_NETLIST_WRITER_OUTPUT_DIR       ; C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/ ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                                    ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                                      ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                                             ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                                              ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                                                                       ; --            ; --          ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                                                          ; --            ; --          ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                                                         ; --            ; --          ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                   ; --            ; --          ; --             ;
++-------------------------------------+--------------------------------------------------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -96,14 +98,22 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:03     ; 1.0                     ; 4775 MB             ; 00:00:03                           ;
-; Fitter                    ; 00:00:53     ; 1.7                     ; 6308 MB             ; 00:01:09                           ;
-; Assembler                 ; 00:00:24     ; 1.0                     ; 4811 MB             ; 00:00:17                           ;
-; TimeQuest Timing Analyzer ; 00:00:13     ; 1.0                     ; 5075 MB             ; 00:00:13                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4775 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:52     ; 1.9                     ; 6315 MB             ; 00:01:26                           ;
+; Assembler                 ; 00:00:20     ; 1.0                     ; 4805 MB             ; 00:00:20                           ;
+; TimeQuest Timing Analyzer ; 00:00:10     ; 1.0                     ; 5072 MB             ; 00:00:10                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4653 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4669 MB             ; 00:00:02                           ;
-; Total                     ; 00:01:39     ; --                      ; --                  ; 00:01:48                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4671 MB             ; 00:00:02                           ;
+; Total                     ; 00:01:42     ; --                      ; --                  ; 00:02:19                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,6 +129,14 @@ agreement for further details.
 ; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-4U47DALM  ; Windows 7 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -130,6 +148,14 @@ quartus_fit --read_settings_files=off --write_settings_files=off CompareNum -c C
 quartus_asm --read_settings_files=off --write_settings_files=off CompareNum -c CompareNum
 quartus_sta CompareNum -c CompareNum
 quartus_eda --read_settings_files=off --write_settings_files=off CompareNum -c CompareNum
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompareNum -c CompareNum --vector_source=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform1.vwf --testbench_file=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/ CompareNum -c CompareNum
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompareNum -c CompareNum --vector_source=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform1.vwf --testbench_file=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/ CompareNum -c CompareNum
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompareNum -c CompareNum --vector_source=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform1.vwf --testbench_file=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/Waveform1.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/ CompareNum -c CompareNum
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompareNum -c CompareNum --vector_source=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform.vwf --testbench_file=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/Waveform.vwf.vt
+quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/ CompareNum -c CompareNum
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog CompareNum -c CompareNum --vector_source=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform.vwf --testbench_file=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/Waveform.vwf.vt
 quartus_eda --functional=on --flatten_buses=off --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/simulation/qsim/ CompareNum -c CompareNum
 

@@ -3,7 +3,7 @@ $comment
 		vcd file CompareNum.msim.vcd -direction
 $end
 $date
-	Sat Jun 12 14:39:38 2021
+	Sat Jun 12 16:00:31 2021
 $end
 $version
 	ModelSim Version 10.1e

@@ -1,6 +1,7 @@
 vendor_name = ModelSim
 source_file = 1, C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/CompareNum.vhd
 source_file = 1, C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform.vwf
+source_file = 1, C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/Waveform1.vwf
 source_file = 1, C:/CircuitFinalProject/logic-circuit-design/by-Pei/CompareNum/db/CompareNum.cbx.xml
 source_file = 1, c:/altera/14.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/altera/14.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd

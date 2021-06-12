@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "06/12/2021 14:39:31"
+// Generated on "06/12/2021 16:00:26"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    CompareNum
 // 
@@ -210,6 +210,46 @@ begin
 	reset = #1000 1'b1;
 	#1000;
 end 
+// u[ 7 ]
+initial
+begin
+	u[7] = 1'b0;
+end 
+// u[ 6 ]
+initial
+begin
+	u[6] = 1'b0;
+end 
+// u[ 5 ]
+initial
+begin
+	u[5] = 1'b0;
+end 
+// u[ 4 ]
+initial
+begin
+	u[4] = 1'b0;
+end 
+// u[ 3 ]
+initial
+begin
+	u[3] = 1'b1;
+end 
+// u[ 2 ]
+initial
+begin
+	u[2] = 1'b0;
+end 
+// u[ 1 ]
+initial
+begin
+	u[1] = 1'b1;
+end 
+// u[ 0 ]
+initial
+begin
+	u[0] = 1'b0;
+end 
 // g[ 7 ]
 always
 begin
@@ -328,46 +368,6 @@ begin
 	g[0] = #256000 1'b0;
 	g[0] = #256000 1'b1;
 	#232000;
-end 
-// u[ 7 ]
-initial
-begin
-	u[7] = 1'b0;
-end 
-// u[ 6 ]
-initial
-begin
-	u[6] = 1'b0;
-end 
-// u[ 5 ]
-initial
-begin
-	u[5] = 1'b0;
-end 
-// u[ 4 ]
-initial
-begin
-	u[4] = 1'b0;
-end 
-// u[ 3 ]
-initial
-begin
-	u[3] = 1'b1;
-end 
-// u[ 2 ]
-initial
-begin
-	u[2] = 1'b0;
-end 
-// u[ 1 ]
-initial
-begin
-	u[1] = 1'b1;
-end 
-// u[ 0 ]
-initial
-begin
-	u[0] = 1'b0;
 end 
 
 CompareNum_vlg_sample_tst tb_sample (

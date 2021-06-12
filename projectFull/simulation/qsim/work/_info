@@ -4,11 +4,11 @@ K3
 cModel Technology
 Z0 dC:\altera\14.0\projectFull\simulation\qsim
 vprojectFull
-Z1 !s100 ba^dA@M?O7=?fz1;@lEoY3
-Z2 IhQdW[6=;ZP=L9WF_<en?[0
-Z3 VfFzJclHbQ`El8M4n2M>5g1
+Z1 !s100 Wz9OzY;LYn4AzE9]ElBP73
+Z2 IC@:>I5R732BeB9m66Pchc1
+Z3 VFKbm9L<6[>HX@MMWS:5ZP0
 Z4 dC:\CircuitFinalProject\logic-circuit-design\projectFull\simulation\qsim
-Z5 w1622014853
+Z5 w1623502106
 Z6 8projectFull.vo
 Z7 FprojectFull.vo
 L0 32
@@ -20,34 +20,34 @@ Z10 o-work work -O0
 Z11 nproject@full
 !i10b 1
 !s85 0
-Z12 !s108 1622014853.873000
+Z12 !s108 1623502107.260000
 Z13 !s107 projectFull.vo|
 !s101 -O0
 vprojectFull_vlg_check_tst
 !i10b 1
-Z14 !s100 9Q6;4ZK]b]bCXRCb9J62G2
-Z15 IQ6:kXbi^A2:095]Z>8C@m3
-Z16 Vj>2b1362o;We1<Mo6:o@82
+Z14 !s100 8i:ITWRXR@Q?fAFS=AW`F3
+Z15 IH6cT4jb[IzC[^a_[j`IzT3
+Z16 V2@h?3eZ^bF2QbWiIm@<jX3
 R4
-Z17 w1622014850
-Z18 8Waveform.vwf.vt
-Z19 FWaveform.vwf.vt
-L0 90
+Z17 w1623502103
+Z18 8Waveform1.vwf.vt
+Z19 FWaveform1.vwf.vt
+Z20 L0 126
 R8
 r1
 !s85 0
 31
-Z20 !s108 1622014853.938000
-Z21 !s107 Waveform.vwf.vt|
-Z22 !s90 -work|work|Waveform.vwf.vt|
+Z21 !s108 1623502107.354000
+Z22 !s107 Waveform1.vwf.vt|
+Z23 !s90 -work|work|Waveform1.vwf.vt|
 !s101 -O0
 R10
-Z23 nproject@full_vlg_check_tst
+Z24 nproject@full_vlg_check_tst
 vprojectFull_vlg_sample_tst
 !i10b 1
-Z24 !s100 [mGHN5F`W8XgcPTSM3_Nf0
-Z25 IZdFU[`a1FMgQ_D[k42H8G0
-Z26 VN0M37h5^6?M2LTJi8P2Ko0
+Z25 !s100 5ki0eRdMj_Y7LJD0k;PQ_1
+Z26 I73nfiCkF0NzY97];LKdCm2
+Z27 V<b<1IPARai4C9JHEnKa:n2
 R4
 R17
 R18
@@ -57,29 +57,29 @@ R8
 r1
 !s85 0
 31
-R20
 R21
 R22
+R23
 !s101 -O0
 R10
-Z27 nproject@full_vlg_sample_tst
+Z28 nproject@full_vlg_sample_tst
 vprojectFull_vlg_vec_tst
 !i10b 1
-Z28 !s100 DlEoXFcICY3H`G@o1G[0K3
-Z29 IeVdS1?ZjFVFOIbP4>H]2B1
-Z30 VTI1kaj]kE>CKXkz5JEY]S0
+!s100 R1SCNj1]6H9In`KH:kL8g3
+IJ9V@K_52HWZWYKlBL@h[_2
+Z29 VTI1kaj]kE>CKXkz5JEY]S0
 R4
 R17
 R18
 R19
-Z31 L0 212
+Z30 L0 815
 R8
 r1
 !s85 0
 31
-R20
 R21
 R22
+R23
 !s101 -O0
 R10
-Z32 nproject@full_vlg_vec_tst
+Z31 nproject@full_vlg_vec_tst
