@@ -17,7 +17,9 @@ g[3] => temp.IN1
 g[2] => temp.IN1
 g[1] => temp.IN1
 g[0] => temp.IN1
-TFS[1] << temp2[1].DB_MAX_OUTPUT_PORT_TYPE
-TFS[0] << temp2[0].DB_MAX_OUTPUT_PORT_TYPE
+TFS[1] <= temp2[1].DB_MAX_OUTPUT_PORT_TYPE
+TFS[0] <= temp2[0].DB_MAX_OUTPUT_PORT_TYPE
+reset => temp2[1].ACLR
+reset => temp2[0].ACLR
 
 
