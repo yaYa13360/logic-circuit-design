@@ -152,7 +152,7 @@ begin
 		y <= ya and yb;
 		z <= za or (ya and zb);
 		
-		if(x = '1' and min_z = '1') then 
+		if((x = '1' and min_z = '1') or (x = '1' and min_y = '1')) then 
 			if (input_digits = "1001") then 
 				temp_digits <= "0000";
 				case input_tens is
@@ -241,7 +241,7 @@ begin
 			op_max_digits <= tp_max_dg;
 		end if;
 		
-		if(z = '1' and max_x = '1') then 
+		if((z = '1' and max_x = '1') or (z = '1' and max_y = '1')) then 
 			if (input_digits = "0000") then 
 				temp_digits <= "1001";
 				case input_tens is
