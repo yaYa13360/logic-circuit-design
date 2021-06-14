@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\altera\14.0\matrixFace\simulation\qsim
 vmatrixFace
-Z1 IDkHldiM]W83MO:=AB;:1R1
-Z2 VY5G@:YHRP2QekcjaXAiz;2
-Z3 dC:\altera\14.0\matrixFace\simulation\qsim
-Z4 w1622567122
-Z5 8matrixFace.vo
-Z6 FmatrixFace.vo
+Z1 !s100 aVIe`h>1Tl5cS2VFHKW712
+Z2 ITJ6RKEkVg[gLS;G<BiF<E0
+Z3 Vhf;]Y60ZQIVdZWM6OOlb72
+Z4 dC:\CircuitFinalProject\logic-circuit-design\by-Nian\matrixFace\simulation\qsim
+Z5 w1623656308
+Z6 8matrixFace.vo
+Z7 FmatrixFace.vo
 L0 32
-Z7 OV;L;10.1e;51
+Z8 OV;L;10.1e;51
 r1
 31
-Z8 !s90 -work|work|matrixFace.vo|
-Z9 o-work work -O0
-Z10 nmatrix@face
+Z9 !s90 -work|work|matrixFace.vo|
+Z10 o-work work -O0
+Z11 nmatrix@face
 !i10b 1
-Z11 !s100 ^hOAa3B[VDK^`1]SiP;FD2
 !s85 0
-Z12 !s108 1622567125.613000
+Z12 !s108 1623656309.112000
 Z13 !s107 matrixFace.vo|
 !s101 -O0
 vmatrixFace_vlg_check_tst
 !i10b 1
-!s100 S>5<JAOYaMTHZ0d:Ll;O42
-Ik]JK6RW;Q3<_4=BmDUTOA2
-VlhWcc0nINLonUjHcc:Gl60
-R3
-Z14 w1622567121
-Z15 8Waveform.vwf.vt
-Z16 FWaveform.vwf.vt
+Z14 !s100 S>5<JAOYaMTHZ0d:Ll;O42
+Z15 Ik]JK6RW;Q3<_4=BmDUTOA2
+Z16 VlhWcc0nINLonUjHcc:Gl60
+R4
+Z17 w1623656305
+Z18 8Waveform.vwf.vt
+Z19 FWaveform.vwf.vt
 L0 62
-R7
+R8
 r1
 !s85 0
 31
-Z17 !s108 1622567125.749000
-Z18 !s107 Waveform.vwf.vt|
-Z19 !s90 -work|work|Waveform.vwf.vt|
+Z20 !s108 1623656309.182000
+Z21 !s107 Waveform.vwf.vt|
+Z22 !s90 -work|work|Waveform.vwf.vt|
 !s101 -O0
-R9
-Z20 nmatrix@face_vlg_check_tst
+R10
+Z23 nmatrix@face_vlg_check_tst
 vmatrixFace_vlg_sample_tst
 !i10b 1
-Z21 !s100 [AK_=V5@I95A^H[gbGX^z3
-Z22 IGJTN3Bg4?<BEB0OIo6@5O1
-Z23 VcKOf3k]<>fn5V:[ihSjcF1
-R3
-R14
-R15
-R16
-L0 30
-R7
-r1
-!s85 0
-31
+Z24 !s100 [AK_=V5@I95A^H[gbGX^z3
+Z25 IGJTN3Bg4?<BEB0OIo6@5O1
+Z26 VcKOf3k]<>fn5V:[ihSjcF1
+R4
 R17
 R18
 R19
+L0 30
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
 !s101 -O0
-R9
-Z24 nmatrix@face_vlg_sample_tst
+R10
+Z27 nmatrix@face_vlg_sample_tst
 vmatrixFace_vlg_vec_tst
 !i10b 1
-!s100 iF>8QUI^]L?FKTS;CUbBP3
-IW[QB1CG5Y>3dlQW4d28o[1
-Z25 V@GW[j4YNMcI7eLQ=[QSff0
-R3
-R14
-R15
-R16
-L0 586
-R7
-r1
-!s85 0
-31
+!s100 _P0OHJT1QYZ8HAm[E;1gN0
+I9fM9<==>ceIeRSG6Y>]:Z2
+Z28 V@GW[j4YNMcI7eLQ=[QSff0
+R4
 R17
 R18
 R19
+Z29 L0 586
+R8
+r1
+!s85 0
+31
+R20
+R21
+R22
 !s101 -O0
-R9
-Z26 nmatrix@face_vlg_vec_tst
+R10
+Z30 nmatrix@face_vlg_vec_tst

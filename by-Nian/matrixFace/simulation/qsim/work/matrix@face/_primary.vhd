@@ -6,7 +6,7 @@ entity matrixFace is
         TFS             : in     vl_logic;
         gameStatus      : in     vl_logic;
         col_s           : out    vl_logic_vector(0 to 7);
-        col2            : out    vl_logic_vector(0 to 7);
-        row_s           : out    vl_logic_vector(0 to 7)
+        row_s           : out    vl_logic_vector(0 to 7);
+        col2            : out    vl_logic_vector(0 to 7)
     );
 end matrixFace;

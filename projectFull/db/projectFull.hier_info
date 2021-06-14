@@ -55,7 +55,7 @@ id2 <= op_min_digits[2].DB_MAX_OUTPUT_PORT_TYPE
 id1 <= op_min_digits[1].DB_MAX_OUTPUT_PORT_TYPE
 id0 <= op_min_digits[0].DB_MAX_OUTPUT_PORT_TYPE
 cols0 <= col_s[0].DB_MAX_OUTPUT_PORT_TYPE
-clk => matrixFace:inst3.clk
+clk => matrixFace:inst1.clk
 cols1 <= col_s[1].DB_MAX_OUTPUT_PORT_TYPE
 cols2 <= col_s[2].DB_MAX_OUTPUT_PORT_TYPE
 cols3 <= col_s[3].DB_MAX_OUTPUT_PORT_TYPE
@@ -71,14 +71,14 @@ rows4 <= row_s[4].DB_MAX_OUTPUT_PORT_TYPE
 rows5 <= row_s[5].DB_MAX_OUTPUT_PORT_TYPE
 rows6 <= row_s[6].DB_MAX_OUTPUT_PORT_TYPE
 rows7 <= row_s[7].DB_MAX_OUTPUT_PORT_TYPE
-col20 <= matrixFace:inst3.col2[0]
-col21 <= matrixFace:inst3.col2[1]
-col22 <= matrixFace:inst3.col2[2]
-col23 <= matrixFace:inst3.col2[3]
-col25 <= matrixFace:inst3.col2[5]
-col24 <= matrixFace:inst3.col2[4]
-col26 <= matrixFace:inst3.col2[6]
-col27 <= matrixFace:inst3.col2[7]
+col20 <= matrixFace:inst1.col2[0]
+col21 <= matrixFace:inst1.col2[1]
+col22 <= matrixFace:inst1.col2[2]
+col23 <= matrixFace:inst1.col2[3]
+col25 <= matrixFace:inst1.col2[5]
+col24 <= matrixFace:inst1.col2[4]
+col26 <= matrixFace:inst1.col2[6]
+col27 <= matrixFace:inst1.col2[7]
 
 
 |projectFull|countLife:inst8
@@ -373,7 +373,7 @@ op_min_digits[2] <= op_min_digits[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 op_min_digits[3] <= op_min_digits[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|projectFull|matrixFace:inst3
+|projectFull|matrixFace:inst1
 clk => cnt[0].CLK
 clk => cnt[1].CLK
 clk => cnt[2].CLK
@@ -403,7 +403,8 @@ clk => col_s[1]~reg0.CLK
 clk => col_s[0]~reg0.CLK
 TFS => col_s.OUTPUTSELECT
 TFS => col_s.OUTPUTSELECT
-gameStatus => ~NO_FANOUT~
+gameStatus => col_s.OUTPUTSELECT
+gameStatus => col_s.OUTPUTSELECT
 col_s[7] <= col_s[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 col_s[6] <= col_s[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 col_s[5] <= col_s[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
